@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <nav>
       <a href="#home">home</a>
@@ -18,33 +19,74 @@
     </nav>
 
     <section id="home">
-      <center>
-        <h1>
-          Do you want to take a ride on my <br />
-          ultra <em>speed</em> car?
-        </h1>
-        <div class="car-menu-wrap">
-          <img src="car.png" id="carTrigger" style="cursor: pointer" />
-          <div class="car-menu" id="carMenu">
-            <a href="https://github.com/josmrpy" target="_blank" rel="noopener"
-              >Github</a
-            >
-            <a
-              href="https://www.linkedin.com/in/josimar-madrigal/"
-              target="_blank"
-              rel="noopener"
-              >LinkedIn</a
-            >
-            <a
-              href="https://www.instagram.com/josmr.py/"
-              target="_blank"
-              rel="noopener"
-              >Instagram</a
+      <div class="hero-shell">
+        <div class="hero-copy">
+          <p class="eyebrow">My Portfolio · Josimar Madrigal</p>
+          <h1>Josimar Madrigal <span class="accent">› josmr.py</span></h1>
+          <p class="hero-bio">
+            Young enthusiast of Computer Science and impact-driven project
+            management, currently focused on STEM, IT, education, intercultural
+            communication, and robotics.
+          </p>
+          <ul class="highlights">
+            <li>Top 5 National STEM Fair Finalist · Costa Rica, 2025</li>
+            <li>Developer of Moody, an AAC communication app</li>
+            <li>Cisco Networking Academy Certified</li>
+          </ul>
+          <div class="hero-actions">
+            <span class="hero-note"
+              >Click the car to explore my links and projects. Some tools below,
+              too. ➜</span
             >
           </div>
         </div>
-        <p>Click to hop in (no seatbelt). Some actual tools below, too.</p>
-      </center>
+
+        <div class="hero-visual">
+          <div class="car-menu-wrap">
+            <img
+              src="sumo_HD.png"
+              id="carTrigger"
+              alt="Open Josimar's featured links"
+            />
+            <div class="car-menu" id="carMenu">
+              <div class="menu-panel">
+                <p class="menu-title">Featured links</p>
+                <a
+                  class="project-card"
+                  href="https://josmrpy.github.io/PJGYS-2026/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span>
+                    <strong>PJGYS 2026</strong>
+                    <small>Parlamento Joven Guía y Scout 2026</small>
+                  </span>
+                </a>
+                <div class="social-links">
+                  <a
+                    href="https://github.com/josmrpy"
+                    target="_blank"
+                    rel="noopener"
+                    >GitHub</a
+                  >
+                  <a
+                    href="https://www.linkedin.com/in/josimar-madrigal/"
+                    target="_blank"
+                    rel="noopener"
+                    >LinkedIn</a
+                  >
+                  <a
+                    href="https://www.instagram.com/josmr.py/"
+                    target="_blank"
+                    rel="noopener"
+                    >Instagram</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <hr class="divider" />
@@ -212,13 +254,26 @@
     <!-- ===================== ROBLOX GAMES CAROUSEL ===================== -->
     <section id="roblox-games">
       <h2>Roblox games</h2>
-      <p class="lead">A few things I've built on Roblox. Use the arrows to browse.</p>
+      <p class="lead">
+        A few things I've built on Roblox. Use the arrows to browse.
+      </p>
 
       <div class="panel">
         <div class="carousel">
-          <button class="carousel-arrow" id="carouselPrev" aria-label="Previous game">&#8592;</button>
+          <button
+            class="carousel-arrow"
+            id="carouselPrev"
+            aria-label="Previous game"
+          >
+            &#8592;
+          </button>
           <div class="carousel-track">
-            <a class="carousel-slide" id="carouselLink" target="_blank" rel="noopener">
+            <a
+              class="carousel-slide"
+              id="carouselLink"
+              target="_blank"
+              rel="noopener"
+            >
               <img id="carouselImg" alt="" />
               <div class="carousel-caption">
                 <h3 id="carouselTitle"></h3>
@@ -226,7 +281,13 @@
               </div>
             </a>
           </div>
-          <button class="carousel-arrow" id="carouselNext" aria-label="Next game">&#8594;</button>
+          <button
+            class="carousel-arrow"
+            id="carouselNext"
+            aria-label="Next game"
+          >
+            &#8594;
+          </button>
         </div>
         <div class="carousel-dots" id="carouselDots"></div>
       </div>
