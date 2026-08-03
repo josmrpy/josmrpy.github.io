@@ -1,10 +1,10 @@
 :root {
-  --ink: rgb(31, 31, 29);
-  --paper: rgb(255, 255, 255);
-  --panel: rgb(250, 250, 248);
-  --border: rgb(228, 226, 220);
-  --accent: rgb(179, 10, 72);
-  --muted: rgb(110, 110, 110);
+  --ink: #1f1f1d;
+  --paper: #ffffff;
+  --panel: #fafaf8;
+  --border: #e4e2dc;
+  --accent: #b30a48;
+  --muted: #6e6e6e;
   --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
