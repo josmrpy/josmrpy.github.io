@@ -156,7 +156,14 @@ nav a:hover {
 
 .img-wrap {
   display: inline-block;
-  padding-right: 5px;
+  padding-right: 4px;
+}
+
+.portfolio-favicon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  vertical-align: middle;
 }
 
 .eyebrow {
@@ -169,15 +176,6 @@ nav a:hover {
   text-transform: uppercase;
   color: var(--accent);
   font-weight: 700;
-}
-
-.eyebrow img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  display: inline-block;
-  vertical-align: middle;
-  flex-shrink: 0;
 }
 
 #home h1 {
