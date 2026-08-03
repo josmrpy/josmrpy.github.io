@@ -154,14 +154,30 @@ nav a:hover {
   margin: 0 auto;
 }
 
-.eyebrow {
+.img-wrap {
   display: inline-block;
+  padding-right: 5px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   margin-bottom: 0.7rem;
   font-size: 0.8rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--accent);
   font-weight: 700;
+}
+
+.eyebrow img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
 }
 
 #home h1 {
@@ -209,7 +225,7 @@ nav a:hover {
   justify-content: center;
 }
 
-#home img {
+#carTrigger {
   width: min(15rem, 60vw);
   height: auto;
   aspect-ratio: 1 / 1;
@@ -223,12 +239,15 @@ nav a:hover {
   100% {
     transform: scaleX(1);
   }
+
   25% {
     transform: scaleX(1.02);
   }
+
   50% {
     transform: scaleX(0.98);
   }
+
   75% {
     transform: scaleX(1.02);
   }
@@ -301,6 +320,14 @@ nav a:hover {
   font-size: 0.76rem;
 }
 
+.card-thumb {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
 .social-links {
   display: flex;
   flex-wrap: wrap;
@@ -327,7 +354,7 @@ nav a:hover {
   }
 
   .hero-visual {
-    justify-content: flex-start;
+    justify-content: center;
   }
 }
 
