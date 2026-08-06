@@ -1,4 +1,4 @@
-// ===================== CAR MENU =====================
+// ===== car menu =====
 (function () {
   const trigger = document.getElementById("carTrigger");
   const menu = document.getElementById("carMenu");
@@ -13,7 +13,7 @@
   });
 })();
 
-// ===================== BINARY COUNTER =====================
+// ===== binary counter =====
 (function () {
   const bitValues = [128, 64, 32, 16, 8, 4, 2, 1];
   const byteRow = document.getElementById("byteRow");
@@ -21,7 +21,7 @@
   const binaryOut = document.getElementById("binaryOut");
   let value = 0;
 
-  bitValues.forEach((v, i) => {
+  bitValues.forEach((v) => {
     const el = document.createElement("div");
     el.className = "bit";
     el.dataset.value = v;
@@ -58,7 +58,7 @@
   render();
 })();
 
-// ===================== NOTE CARDS =====================
+// ===== note cards =====
 (function () {
   const STORAGE_KEY = "jasiel-note-cards";
   const cardGrid = document.getElementById("cardGrid");
@@ -144,7 +144,6 @@
     renderCards();
   });
 
-  // check for a shared note in the URL
   const params = new URLSearchParams(window.location.search);
   const sharedParam = params.get("note");
   if (sharedParam) {
@@ -154,7 +153,7 @@
       banner.className = "shared-banner";
       banner.innerHTML =
         '<div class="tag">shared with you</div>' +
-        '<h3 style="margin-top:0.4rem;"></h3><p style="white-space:pre-wrap;margin:0 0 0.7rem;"></p>' +
+        "<h3></h3><p></p>" +
         '<button class="btn-ghost" id="saveSharedBtn">Save to my cards</button>';
       banner.querySelector("h3").textContent = shared.t || "Untitled";
       banner.querySelector("p").textContent = shared.b;
@@ -168,22 +167,21 @@
         banner.remove();
       });
     } catch (e) {
-      // ignore malformed note param
+      // malformed note param, ignore
     }
   }
 
   renderCards();
 })();
 
-// ===================== TOWER OF HANOI =====================
+// ===== tower of hanoi =====
 (function () {
   const board = document.getElementById("hanoiBoard");
   const status = document.getElementById("hanoiStatus");
   const discCountSelect = document.getElementById("discCount");
   const resetBtn = document.getElementById("hanoiReset");
 
-  let discCount = parseInt(discCountSelect.value, 10);
-  let pegs, selected, moves;
+  let discCount, pegs, selected, moves;
 
   function setup() {
     discCount = parseInt(discCountSelect.value, 10);
@@ -201,8 +199,7 @@
       peg.forEach((discSize) => {
         const discEl = document.createElement("div");
         discEl.className = "disc";
-        const widthPct = 35 + (discSize / discCount) * 65;
-        discEl.style.width = widthPct + "%";
+        discEl.style.width = 35 + (discSize / discCount) * 65 + "%";
         discEl.textContent = discSize;
         pegEl.appendChild(discEl);
       });
@@ -216,7 +213,7 @@
   }
 
   function handlePegClick(i) {
-    if (pegs[2].length === discCount) return; // already solved
+    if (pegs[2].length === discCount) return;
     if (selected === null) {
       if (pegs[i].length > 0) selected = i;
     } else if (selected === i) {
@@ -240,7 +237,7 @@
   setup();
 })();
 
-// ===================== SUBNETTING CHEAT SHEET =====================
+// ===== subnetting cheat sheet =====
 (function () {
   function maskFromCidr(cidr) {
     return cidr === 0 ? 0 : (0xffffffff << (32 - cidr)) >>> 0;
@@ -261,7 +258,6 @@
     return int >>> 0;
   }
 
-  // reference table
   const tableBody = document.getElementById("cidrTableBody");
   for (let cidr = 0; cidr <= 32; cidr++) {
     const mask = maskFromCidr(cidr);
@@ -284,7 +280,6 @@
     tableBody.appendChild(row);
   }
 
-  // calculator
   const cidrSelect = document.getElementById("calcCidr");
   for (let cidr = 0; cidr <= 32; cidr++) {
     const opt = document.createElement("option");
@@ -302,7 +297,8 @@
     return (
       '<div><span class="label">' +
       label +
-      '</span><span class="value">' +
+      "</span>" +
+      '<span class="value">' +
       value +
       "</span></div>"
     );
@@ -353,9 +349,8 @@
   calculate();
 })();
 
-// ===================== ROBLOX GAMES CAROUSEL =====================
-// To add a new game later, just add another object to this array —
-// the carousel and dots update automatically, no other code to touch.
+// ===== roblox games carousel =====
+// add a game by pushing another object to this array
 const ROBLOX_GAMES = [
   {
     title: "Towers of Hanoi",
@@ -369,7 +364,6 @@ const ROBLOX_GAMES = [
     image:
       "https://tr.rbxcdn.com/180DAY-4fa857881bc56e768c405f049664e4f4/500/280/Image/Jpeg/noFilter",
   },
-  // { title: "Next Game", url: "https://www.roblox.com/games/.../Name", image: "https://tr.rbxcdn.com/..." },
 ];
 
 (function () {

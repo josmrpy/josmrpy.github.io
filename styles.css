@@ -53,7 +53,8 @@ section > p.lead {
   padding: 1.25rem 1.5rem;
 }
 
-.panel + .panel {
+.panel + .panel,
+.panel-top {
   margin-top: 1rem;
 }
 
@@ -506,6 +507,15 @@ hr.divider {
   letter-spacing: 0.03em;
 }
 
+.shared-banner h3 {
+  margin-top: 0.4rem;
+}
+
+.shared-banner p {
+  white-space: pre-wrap;
+  margin: 0 0 0.7rem;
+}
+
 /* hanoi */
 .hanoi-controls {
   display: flex;
@@ -514,6 +524,11 @@ hr.divider {
   justify-content: center;
   margin-bottom: 1rem;
   flex-wrap: wrap;
+}
+
+.hanoi-label {
+  font-size: 0.85rem;
+  color: var(--muted);
 }
 
 .hanoi-board {
@@ -768,11 +783,22 @@ tbody td {
   background: var(--ink);
 }
 
-footer {
+/* footer */
+.site-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 24px 0 12px;
   color: var(--muted);
   font-size: 0.8rem;
-  padding: 2rem 1rem 3rem;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
 }
 
 @media (max-width: 30rem) {
