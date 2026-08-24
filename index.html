@@ -12,11 +12,13 @@
 <body>
   <nav>
     <a href="#home">home</a>
-    <a href="#binary">binary counter</a>
-    <a href="#notes">note cards</a>
-    <a href="#hanoi">tower of hanoi</a>
-    <a href="#subnetting">subnetting cheat sheet</a>
-    <a href="#roblox-games">roblox games</a>
+    <a href="#about">about</a>
+    <a href="#projects">projects</a>
+    <a href="#experience">experience</a>
+    <a href="#skills">skills</a>
+    <a href="#education">education</a>
+    <a href="#playground">playground</a>
+    <a href="#contact">contact</a>
   </nav>
 
   <!-- Home -->
@@ -39,11 +41,12 @@
           <li>Top 5 National STEM Fair Finalist · Costa Rica, 2025</li>
           <li>Developer of Moody, an AAC communication app</li>
           <li>Cisco Networking Academy Certified</li>
+          <li>Stanford Code in Place 2026 Graduate</li>
           <li>Youth Ambassadors Program Exchange Alumnus</li>
         </ul>
         <div class="hero-actions">
-          <span class="hero-note">Click the car to explore my links and projects. Some tools below,
-            too. ➜</span>
+          <span class="hero-note">Click the sumobot to explore my links and projects. Some tools
+            below, too. ➜</span>
         </div>
       </div>
 
@@ -81,185 +84,572 @@
 
   <hr class="divider" />
 
-  <!-- Binary counter -->
-  <section id="binary">
-    <h2>Binary counter</h2>
-    <p class="lead">
-      Click a bit to flip it, or step through the byte with the buttons.
-    </p>
-    <div class="panel">
-      <div class="bit-values">
-        <span>128</span><span>64</span><span>32</span><span>16</span>
-        <span>8</span><span>4</span><span>2</span><span>1</span>
+  <!-- About -->
+  <section id="about">
+    <h2>About</h2>
+    <div class="about-shell">
+      <div class="about-photo-slot">
+        <img class="about-photo-placeholder" src="https://github.com/josmrpy.png" alt="Josimar Madrigal" />
       </div>
-      <div class="byte-row" id="byteRow"></div>
-      <div class="binary-readout">
-        <div class="decimal" id="decimalOut">0</div>
-        <div id="binaryOut">00000000</div>
-      </div>
-      <div class="binary-controls">
-        <button class="btn-ghost" id="decBtn">-1</button>
-        <button class="btn-ghost" id="incBtn">+1</button>
-        <button class="btn-ghost" id="resetBtn">reset</button>
+      <div class="about-copy">
+        <p class="about-bio">
+          I'm a Costa Rican student finishing a technical diploma in Network
+          Configuration, Communications Support and Operating Systems at CTP
+          Limón. Alongside that I build software on my own time — an AAC app,
+          a legislative platform, a sumo-fighting robot — usually because I
+          ran into a problem I wanted to fix rather than because a class asked
+          for it.
+        </p>
+        <p class="about-bio">
+          What ties most of it together is a simple idea: technology is most
+          interesting to me when it can solve a real problem. I'm particularly
+          interested in accessibility and civic participation, where software
+          and technical skills can make information, communication, and
+          opportunities easier to reach.
+        </p>
+        <dl class="quick-facts">
+          <div>
+            <dt>Based in</dt>
+            <dd>Limón, Costa Rica</dd>
+          </div>
+          <div>
+            <dt>Education</dt>
+            <dd>CTP Limón — Networks &amp; Operating Systems, Dec 2026</dd>
+          </div>
+          <div>
+            <dt>Languages</dt>
+            <dd>Spanish (native) · English (B2)</dd>
+          </div>
+          <div>
+            <dt>Interested in</dt>
+            <dd>Accessible tech · Networking · Robotics · Civic tech</dd>
+          </div>
+        </dl>
       </div>
     </div>
   </section>
 
   <hr class="divider" />
 
-  <!-- Note cards -->
-  <section id="notes">
-    <h2>Note cards</h2>
-    <p class="lead">
-      Write a card, share the link, whoever opens it sees it straight away.
-      Cards you save stick around in this browser only.
-    </p>
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <p class="lead">A selection of projects I've designed, built, and contributed to.</p>
 
-    <div id="sharedBanner"></div>
-
-    <div class="panel">
-      <div class="note-form">
-        <div class="note-form-row">
-          <input type="text" id="noteTitle" placeholder="Title (optional)" />
+    <div class="projects-grid">
+      <article class="project-tile">
+        <div class="project-tile-head">
+          <h3>Moody — Colors That Speak</h3>
+          <span class="project-tag">AAC · Accessibility</span>
         </div>
-        <textarea id="noteBody" placeholder="Write something..."></textarea>
+        <p>
+          An AAC (Augmentative and Alternative Communication) app designed to support communication through ARASAAC
+          pictograms, accompanied by an ESP32-based wearable prototype for expressing emotional states. Selected among
+          the Top 5 nationally at ExpoTécnica 2025 from 60+ competing projects.
+        </p>
+      </article>
+
+      <article class="project-tile">
+        <div class="project-tile-head">
+          <h3>PJGYS 2026</h3>
+          <span class="project-tag">Web · Civic tech</span>
+        </div>
+        <p>
+          Web platform developed for Parlamento Joven Guía y Scout Costa Rica 2026, used to publish and organize 11
+          legislative proposals with PDF viewing, search, filtering, and progress tracking. I also authored Proposal #6
+          on communicative accessibility in public spaces, which was selected by my fraction.
+        </p>
+      </article>
+
+      <article class="project-tile">
+        <div class="project-tile-head">
+          <h3>Sumobot: Equipo BMO</h3>
+          <span class="project-tag">Robotics</span>
+        </div>
+        <p>
+          Autonomous sumo-fighting robot built on an ESP32-based board with CircuitPython. The team competed at Maker
+          Faire San José in two consecutive editions, alongside 190+ participating teams each year. I maintain the
+          embedded codebase and help mentor incoming teammates.
+        </p>
+      </article>
+
+      <article class="project-tile">
+        <div class="project-tile-head">
+          <h3>Aion: Academic Information & Opportunity Network</h3>
+          <span class="project-tag">Web · Community</span>
+        </div>
+        <p>
+          A student-led web platform I helped build to connect a school community of 1,000+ learners with academic and
+          leadership opportunities. More than 50 opportunities have been organized and published so far, combining
+          student-submitted listings with stories and practical information.
+        </p>
+      </article>
+
+      <article class="project-tile">
+        <div class="project-tile-head">
+          <h3>PytoClicker</h3>
+          <span class="project-tag">Python · Desktop</span>
+        </div>
+        <p>
+          A lightweight Python autoclicker built with Tkinter, featuring configurable clicking, hotkey controls, and a
+          minimal desktop interface. The project was also an exercise in restructuring a small application into a
+          cleaner class-based architecture.
+        </p>
+      </article>
+    </div>
+    <p class="project-note">
+      Links for the ones I've made public are under the sumobot menu at the
+      top of the page — not all of these are open-source yet.
+    </p>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- Experience & Achievements -->
+  <section id="experience">
+    <h2>Experience &amp; Achievements</h2>
+    <p class="lead">Experiences, programs, and leadership roles that have shaped how I work.</p>
+
+    <ul class="timeline">
+      <li>
+        <span class="timeline-date">Sep 2024</span>
         <div>
-          <button class="btn" id="addNoteBtn">Add card</button>
+          <h3>Parlamento Joven Caribe 2024</h3>
+          <p>
+            Youth civic participation and leadership program organized in partnership with Costa Rica's Legislative
+            Assembly.
+          </p>
         </div>
-      </div>
-    </div>
+      </li>
+      <li>
+        <span class="timeline-date">2025</span>
+        <div>
+          <h3>ExpoTécnica Nacional</h3>
+          <p>
+            Top 5 national STEM finalist with Moody, among 60+ competing
+            projects.
+          </p>
+        </div>
+      </li>
+      <li>
+        <span class="timeline-date">Oct–Nov 2025</span>
+        <div>
+          <h3>Youth Ambassadors Program — U.S. Department of State</h3>
+          <p>
+            Selected as 1 of 8 students from Costa Rica for a leadership and intercultural exchange program organized
+            with the U.S. Embassy and Georgetown University.
+          </p>
+        </div>
+      </li>
+      <li>
+        <span class="timeline-date">May–Nov 2025</span>
+        <div>
+          <h3>Consejo Participativo — Patronato Nacional de la Infancia</h3>
+          <p>
+            Participated in youth consultation and advocacy activities focused on children's and adolescents' rights,
+            including workshops and talks on human rights and mental health in rural communities.
+          </p>
+        </div>
+      </li>
+      <li>
+        <span class="timeline-date">Jul–Aug 2026</span>
+        <div>
+          <h3>Parlamento Joven Guía y Scout</h3>
+          <p>
+            Authored a legislative proposal promoting communicative accessibility in public spaces, which was selected
+            by my fraction for the parliamentary process.
+          </p>
+        </div>
+      </li>
+      <li>
+        <span class="timeline-date">2025</span>
+        <div>
+          <h3>Vice President of the Assembly of Representatives</h3>
+          <p>
+            Served as Vice President of the Assembly of Representatives at CTP Limón, participating in student
+            representation, decision-making, and electoral processes involving two student parties.
+          </p>
+        </div>
+      </li>
 
-    <div class="card-grid" id="cardGrid"></div>
-    <p class="empty-hint" id="emptyHint">No cards yet — add one above.</p>
+      <li>
+        <span class="timeline-date">2026</span>
+        <div>
+          <h3>Student Electoral Tribunal</h3>
+          <p>
+            President of the Student Electoral Tribunal at CTP Limón, overseeing student elections, party registration,
+            electoral procedures, and related disciplinary matters involving four student parties.
+          </p>
+        </div>
+      </li>
+      <li>
+        <span class="timeline-date">2026 – Present</span>
+        <div>
+          <h3>
+            Protagonista de grupo — Asociación de Guías y Scouts de Costa Rica
+          </h3>
+          <p>
+            Active Protagonista de Grupo 144, contributing to community activities, youth leadership, and civic
+            formation programs.
+          </p>
+        </div>
+      </li>
+      <li>
+        <span class="timeline-date">2026</span>
+        <div>
+          <h3>TeachNow Volunteer Mentor — Code in Place</h3>
+          <p>
+            Volunteer mentor for Stanford University's Code in Place, supporting students as they worked through
+            introductory Python programming and problem-solving exercises.
+          </p>
+        </div>
+      </li>
+    </ul>
   </section>
 
   <hr class="divider" />
 
-  <!-- Tower of Hanoi -->
-  <section id="hanoi">
-    <h2>Tower of Hanoi</h2>
-    <p class="lead">
-      Click a peg to pick up its top disc, click another peg to drop it there.
-      Move every disc onto the last peg.
-    </p>
-
-    <div class="hanoi-controls">
-      <label for="discCount" class="hanoi-label">discs:</label>
-      <select id="discCount">
-        <option value="3">3</option>
-        <option value="4" selected>4</option>
-        <option value="5">5</option>
-      </select>
-      <button class="btn-ghost" id="hanoiReset">reset</button>
-    </div>
-
-    <div class="hanoi-board" id="hanoiBoard"></div>
-    <p class="hanoi-status" id="hanoiStatus">Moves: 0</p>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- Subnetting cheat sheet -->
-  <section id="subnetting">
-    <h2>Subnetting cheat sheet</h2>
-    <p class="lead">
-      Octet rules, the formulas, a full prefix reference table, and a quick
-      calculator.
-    </p>
-
-    <div class="rule-grid">
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
       <div class="panel">
-        <h3>Octet rules</h3>
+        <h3>Programming &amp; Development</h3>
         <ul>
-          <li>4 octets, 8 bits each, 0–255 per octet</li>
-          <li>Class A: 1–126, default mask /8</li>
-          <li>Class B: 128–191, default mask /16</li>
-          <li>Class C: 192–223, default mask /24</li>
-          <li>127.x = loopback</li>
+          <li>Python</li>
+          <li>CircuitPython</li>
+          <li>Lua</li>
+          <li>HTML · CSS · JavaScript</li>
         </ul>
       </div>
       <div class="panel">
-        <h3>Private ranges</h3>
+        <h3>Networking</h3>
         <ul>
-          <li>10.0.0.0/8</li>
-          <li>172.16.0.0/12</li>
-          <li>192.168.0.0/16</li>
+          <li>CCNA (SRWE, ITN)</li>
+          <li>IT Essentials</li>
+          <li>Packet Tracer</li>
+          <li>Subnetting · TCP/IP</li>
         </ul>
       </div>
       <div class="panel">
-        <h3>Formulas</h3>
+        <h3>Hardware &amp; Robotics</h3>
         <ul>
-          <li>Subnets = 2^s (s = borrowed bits)</li>
-          <li>Hosts/subnet = 2^h − 2 (h = host bits)</li>
-          <li>Block size = 256 − mask octet</li>
-          <li>/31 = 2 usable (point-to-point), /32 = 1 host</li>
+          <li>ESP32</li>
+          <li>Sensors</li>
+          <li>Prototyping</li>
         </ul>
       </div>
-    </div>
-
-    <div class="panel panel-top">
-      <h3>Prefix reference table</h3>
-      <div class="table-scroll">
-        <table>
-          <thead>
-            <tr>
-              <th>CIDR</th>
-              <th>Subnet mask</th>
-              <th>Block size</th>
-              <th>Usable hosts</th>
-            </tr>
-          </thead>
-          <tbody id="cidrTableBody"></tbody>
-        </table>
+      <div class="panel">
+        <h3>Tools &amp; Practices</h3>
+        <ul>
+          <li>Git · GitHub</li>
+          <li>VS Code · Thonny</li>
+          <li>Agile · Scrum</li>
+        </ul>
       </div>
-    </div>
-
-    <div class="panel">
-      <h3>Calculator</h3>
-      <div class="calc-form">
-        <div>
-          <label for="calcIp">IP address</label>
-          <input type="text" id="calcIp" placeholder="192.168.1.10" value="192.168.1.10" />
-        </div>
-        <div>
-          <label for="calcCidr">CIDR</label>
-          <select id="calcCidr"></select>
-        </div>
-        <button class="btn-accent" id="calcBtn">Calculate</button>
-      </div>
-      <p class="calc-error" id="calcError"></p>
-      <div class="calc-results" id="calcResults"></div>
     </div>
   </section>
 
   <hr class="divider" />
 
-  <!-- Roblox games -->
-  <section id="roblox-games">
-    <h2>Roblox games</h2>
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+
+    <ul class="education-list">
+      <li>
+        <div>
+          <h3>
+            Technical Diploma — Network Configuration, Communications Support
+            &amp; Operating Systems
+          </h3>
+          <p>Colegio Técnico Profesional de Limón</p>
+        </div>
+        <span class="education-date">Expected Dec 2026</span>
+      </li>
+      <li>
+        <div>
+          <h3>High School Diploma</h3>
+          <p>Colegio Técnico Profesional de Limón</p>
+        </div>
+        <span class="education-date">Expected Dec 2026</span>
+      </li>
+      <li>
+        <div>
+          <h3>Access Microscholarship Program (English Access)</h3>
+          <p>Tecnológico de Costa Rica / U.S. Embassy</p>
+        </div>
+        <span class="education-date">Feb 2024 – Apr 2026</span>
+      </li>
+    </ul>
+
+    <details class="cert-details">
+      <summary>View all certifications (14)</summary>
+      <ul class="cert-list">
+        <li>
+          <span>CCNA: Switching, Routing &amp; Wireless Essentials — Cisco
+            Networking Academy</span><span class="cert-date">Nov 2025</span>
+        </li>
+        <li>
+          <span>CCNA: Introduction to Networks — Cisco Networking Academy</span><span class="cert-date">Jun 2025</span>
+        </li>
+        <li>
+          <span>IT Essentials — Cisco Networking Academy</span><span class="cert-date">Nov 2024</span>
+        </li>
+        <li>
+          <span>PCAP: Programming Essentials in Python — Cisco Networking
+            Academy</span><span class="cert-date">Nov 2024</span>
+        </li>
+        <li>
+          <span>Python Essentials 2 — Cisco Networking Academy</span><span class="cert-date">May 2026</span>
+        </li>
+        <li>
+          <span>Junior Cybersecurity Analyst Career Path — Cisco Networking
+            Academy</span><span class="cert-date">Jun 2026</span>
+        </li>
+        <li>
+          <span>Introduction to Data Science — Cisco Networking Academy</span><span class="cert-date">Apr 2026</span>
+        </li>
+        <li>
+          <span>Introduction to Modern AI — Cisco Networking Academy</span><span class="cert-date">Apr 2026</span>
+        </li>
+        <li>
+          <span>Code in Place: Programming Fundamentals — Stanford
+            University</span><span class="cert-date">May 2026</span>
+        </li>
+        <li>
+          <span>Agile Project Management Core — Go Beyond</span><span class="cert-date">Apr 2026</span>
+        </li>
+        <li>
+          <span>Scrum Fundamentals Certified — SCRUMstudy Italia</span><span class="cert-date">Apr 2026</span>
+        </li>
+        <li>
+          <span>Project Management Essentials Certified (PMEC) — Management &amp;
+            Strategy Institute</span><span class="cert-date">Mar 2026</span>
+        </li>
+        <li>
+          <span>Cooperativismo: Origen, Desarrollo y Desafíos — CENECOOP
+            R.L.</span><span class="cert-date">2025</span>
+        </li>
+        <li>
+          <span>Participante del Sumobot en Maker Faire San José 2025 —
+            Universidad Cenfotec</span><span class="cert-date">Jul 2025</span>
+        </li>
+      </ul>
+    </details>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- Playground -->
+  <section id="playground">
+    <h2>Playground</h2>
     <p class="lead">
-      A few things I've built on Roblox. Use the arrows to browse.
+      Small interactive tools I've built along the way. Pick one below.
     </p>
 
-    <div class="panel">
-      <div class="carousel">
-        <button class="carousel-arrow" id="carouselPrev" aria-label="Previous game">
-          &#8592;
-        </button>
-        <div class="carousel-track">
-          <a class="carousel-slide" id="carouselLink" target="_blank" rel="noopener">
-            <img id="carouselImg" alt="" />
-            <div class="carousel-caption">
-              <h3 id="carouselTitle"></h3>
-              <span class="carousel-cta">Play on Roblox →</span>
-            </div>
-          </a>
+    <div class="playground-tabs" role="tablist">
+      <button class="tab-btn active" data-tab="tab-binary" role="tab" aria-selected="true">
+        Binary counter
+      </button>
+      <button class="tab-btn" data-tab="tab-notes" role="tab" aria-selected="false">
+        Note cards
+      </button>
+      <button class="tab-btn" data-tab="tab-hanoi" role="tab" aria-selected="false">
+        Tower of Hanoi
+      </button>
+      <button class="tab-btn" data-tab="tab-subnetting" role="tab" aria-selected="false">
+        Subnetting
+      </button>
+      <button class="tab-btn" data-tab="tab-roblox" role="tab" aria-selected="false">
+        Roblox games
+      </button>
+    </div>
+
+    <!-- Binary counter -->
+    <div class="tab-panel active" id="tab-binary" data-panel>
+      <p class="lead">
+        Click a bit to flip it, or step through the byte with the buttons.
+      </p>
+      <div class="panel">
+        <div class="bit-values">
+          <span>128</span><span>64</span><span>32</span><span>16</span>
+          <span>8</span><span>4</span><span>2</span><span>1</span>
         </div>
-        <button class="carousel-arrow" id="carouselNext" aria-label="Next game">
-          &#8594;
-        </button>
+        <div class="byte-row" id="byteRow"></div>
+        <div class="binary-readout">
+          <div class="decimal" id="decimalOut">0</div>
+          <div id="binaryOut">00000000</div>
+        </div>
+        <div class="binary-controls">
+          <button class="btn-ghost" id="decBtn">-1</button>
+          <button class="btn-ghost" id="incBtn">+1</button>
+          <button class="btn-ghost" id="resetBtn">reset</button>
+        </div>
       </div>
-      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+
+    <!-- Note cards -->
+    <div class="tab-panel" id="tab-notes" data-panel>
+      <p class="lead">
+        Write a card, share the link, whoever opens it sees it straight away.
+        Cards you save stick around in this browser only.
+      </p>
+
+      <div id="sharedBanner"></div>
+
+      <div class="panel">
+        <div class="note-form">
+          <div class="note-form-row">
+            <input type="text" id="noteTitle" placeholder="Title (optional)" />
+          </div>
+          <textarea id="noteBody" placeholder="Write something..."></textarea>
+          <div>
+            <button class="btn" id="addNoteBtn">Add card</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-grid" id="cardGrid"></div>
+      <p class="empty-hint" id="emptyHint">No cards yet — add one above.</p>
+    </div>
+
+    <!-- Tower of Hanoi -->
+    <div class="tab-panel" id="tab-hanoi" data-panel>
+      <p class="lead">
+        Click a peg to pick up its top disc, click another peg to drop it
+        there. Move every disc onto the last peg.
+      </p>
+
+      <div class="hanoi-controls">
+        <label for="discCount" class="hanoi-label">discs:</label>
+        <select id="discCount">
+          <option value="3">3</option>
+          <option value="4" selected>4</option>
+          <option value="5">5</option>
+        </select>
+        <button class="btn-ghost" id="hanoiReset">reset</button>
+      </div>
+
+      <div class="hanoi-board" id="hanoiBoard"></div>
+      <p class="hanoi-status" id="hanoiStatus">Moves: 0</p>
+    </div>
+
+    <!-- Subnetting cheat sheet -->
+    <div class="tab-panel" id="tab-subnetting" data-panel>
+      <p class="lead">
+        Octet rules, the formulas, a full prefix reference table, and a quick
+        calculator.
+      </p>
+
+      <div class="rule-grid">
+        <div class="panel">
+          <h3>Octet rules</h3>
+          <ul>
+            <li>4 octets, 8 bits each, 0–255 per octet</li>
+            <li>Class A: 1–126, default mask /8</li>
+            <li>Class B: 128–191, default mask /16</li>
+            <li>Class C: 192–223, default mask /24</li>
+            <li>127.x = loopback</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Private ranges</h3>
+          <ul>
+            <li>10.0.0.0/8</li>
+            <li>172.16.0.0/12</li>
+            <li>192.168.0.0/16</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Formulas</h3>
+          <ul>
+            <li>Subnets = 2^s (s = borrowed bits)</li>
+            <li>Hosts/subnet = 2^h − 2 (h = host bits)</li>
+            <li>Block size = 256 − mask octet</li>
+            <li>/31 = 2 usable (point-to-point), /32 = 1 host</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel panel-top">
+        <h3>Prefix reference table</h3>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>CIDR</th>
+                <th>Subnet mask</th>
+                <th>Block size</th>
+                <th>Usable hosts</th>
+              </tr>
+            </thead>
+            <tbody id="cidrTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Calculator</h3>
+        <div class="calc-form">
+          <div>
+            <label for="calcIp">IP address</label>
+            <input type="text" id="calcIp" placeholder="192.168.1.10" value="192.168.1.10" />
+          </div>
+          <div>
+            <label for="calcCidr">CIDR</label>
+            <select id="calcCidr"></select>
+          </div>
+          <button class="btn-accent" id="calcBtn">Calculate</button>
+        </div>
+        <p class="calc-error" id="calcError"></p>
+        <div class="calc-results" id="calcResults"></div>
+      </div>
+    </div>
+
+    <!-- Roblox games -->
+    <div class="tab-panel" id="tab-roblox" data-panel>
+      <p class="lead">
+        A few things I've built on Roblox. Use the arrows to browse.
+      </p>
+
+      <div class="panel">
+        <div class="carousel">
+          <button class="carousel-arrow" id="carouselPrev" aria-label="Previous game">
+            &#8592;
+          </button>
+          <div class="carousel-track">
+            <a class="carousel-slide" id="carouselLink" target="_blank" rel="noopener">
+              <img id="carouselImg" alt="" />
+              <div class="carousel-caption">
+                <h3 id="carouselTitle"></h3>
+                <span class="carousel-cta">Play on Roblox →</span>
+              </div>
+            </a>
+          </div>
+          <button class="carousel-arrow" id="carouselNext" aria-label="Next game">
+            &#8594;
+          </button>
+        </div>
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Let's build something.</h2>
+    <p class="lead">
+      Interested in technology, education, accessibility, or collaborative
+      projects? I'd love to hear from you.
+    </p>
+    <div class="contact-actions">
+      <a class="btn" href="https://github.com/josmrpy" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn-ghost" href="https://www.linkedin.com/in/josimar-madrigal/" target="_blank"
+        rel="noopener">LinkedIn</a>
+      <a class="btn-ghost" href="https://www.instagram.com/josmr.py/" target="_blank" rel="noopener">Instagram</a>
     </div>
   </section>
 
