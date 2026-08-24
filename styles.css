@@ -94,7 +94,7 @@ button {
 }
 
 .btn-ghost:hover {
-  border-color: var(--ink);
+  border-color: var(--accent);
 }
 
 input,
@@ -829,6 +829,12 @@ tbody td {
   grid-template-columns: auto 1fr;
   gap: 2rem;
   align-items: start;
+}
+
+.about-banner {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.2rem;
 }
 
 .about-photo-slot {
