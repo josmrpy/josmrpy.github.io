@@ -21,6 +21,37 @@
     <a href="#contact">contact</a>
   </nav>
 
+  <!-- Featured articles -->
+  <section id="featured-articles" class="featured-articles">
+    <div class="section-heading">
+      <p class="eyebrow">Featured elsewhere</p>
+      <h2>Where I've shown up</h2>
+    </div>
+    <div class="article-carousel" aria-label="Featured articles">
+      <button class="carousel-arrow" id="articlePrev" aria-label="Previous article">
+        &#8592;
+      </button>
+      <div class="article-track">
+        <a class="article-slide" id="articleLink" target="_blank" rel="noopener">
+          <img class="article-thumb" id="articleImage" alt="" />
+          <div class="article-content">
+            <div class="article-meta">
+              <span id="articleSource"></span>
+              <span id="articleDate"></span>
+            </div>
+            <h3 id="articleTitle"></h3>
+            <p id="articleSummary"></p>
+            <span class="article-cta">Read article &#8594;</span>
+          </div>
+        </a>
+      </div>
+      <button class="carousel-arrow" id="articleNext" aria-label="Next article">
+        &#8594;
+      </button>
+    </div>
+    <div class="carousel-dots" id="articleDots" aria-label="Choose an article"></div>
+  </section>
+
   <!-- Home -->
   <section id="home">
     <div class="hero-shell">
@@ -68,6 +99,20 @@
                 <span>
                   <strong>Moody</strong>
                   <small>An AAC communication app</small>
+                </span>
+              </a>
+              <a class="project-card" href="https://linktr.ee/aion.huellas.cr/" target="_blank" rel="noopener">
+                <img class="card-thumb" src="thumbs/aion.png" alt="" />
+                <span>
+                  <strong>Aion</strong>
+                  <small>Academic Information & Opportunity Network</small>
+                </span>
+              </a>
+              <a class="project-card" href="https://linktr.ee/smileseekers.cr/" target="_blank" rel="noopener">
+                <img class="card-thumb" src="thumbs/smileseekers.png" alt="" />
+                <span>
+                  <strong>Smile Seekers</strong>
+                  <small>Community Health Initiative</small>
                 </span>
               </a>
               <div class="social-links">
@@ -181,7 +226,7 @@
 
       <article class="project-tile">
         <div class="project-tile-head">
-          <h3>Sumobot: Equipo BMO</h3>
+          <h3>Sumobot competition</h3>
           <span class="project-tag">Robotics</span>
         </div>
         <p>
@@ -684,7 +729,8 @@
   <section id="contact">
     <h2>Let's build something.</h2>
     <p class="lead">
-      Have an idea, a challenge, or a project that could make a difference? Let's talk.
+      Have an idea, a challenge, or a project that could make a difference?
+      Let's talk.
     </p>
     <div class="contact-actions">
       <a class="btn" href="https://github.com/josmrpy" target="_blank" rel="noopener">GitHub</a>

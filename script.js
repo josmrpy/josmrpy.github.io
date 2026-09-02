@@ -367,6 +367,110 @@
   calculate();
 })();
 
+// ===== featured articles carousel =====
+// Add another article object here when you have a real page to feature.
+const ARTICLES = [
+  {
+    title: "Connecting Communities Through Tech and Leadership",
+    source: "Georgetown University — CIED",
+    date: "Sep 2026",
+    summary:
+      "Case study on my Youth Ambassadors exchange in Cleveland and how it inspired Moody, an app I built for neurodivergent communication.",
+    image:
+      "https://cied.georgetown.edu/wp-content/uploads/sites/323/2026/09/Josimar_inside-C-sign.jpg",
+    url: "https://cied.georgetown.edu/case-studies/josimar-madrigal/",
+  },
+  {
+    title: "56 Limón students formed Parlamento Joven Caribe 2024",
+    source: "Ministerio de Educación Pública",
+    date: "Sep 2024",
+    summary:
+      "MEP coverage of Parlamento Joven Caribe 2024, the legislative simulation where I represented my school.",
+    image:
+      "https://www.mep.go.cr/sites/default/files/2024-09/est%20de%20CTP%20Liverpool%20y%20Limon%20en%20sus%20curules.JPG",
+    url: "https://www.mep.go.cr/noticias/56-estudiantes-limonenses-conformaron-parlamento-joven-caribe-2024",
+  },
+  {
+    title: "Parlamento Joven Guía y Scout 2026",
+    source: "Asamblea Legislativa Costa Rica — YouTube",
+    date: "Aug 2026",
+    summary:
+      "Official recap from Costa Rica's Legislative Assembly of the youth civic program I took part in alongside 54 other students nationwide.",
+    image: "thumbs/scout.png",
+    url: "https://youtu.be/3w737d1_8CI",
+  },
+  {
+    title: "CCWA welcomes Youth Ambassadors from Latin America",
+    source: "Cleveland Council on World Affairs — Facebook",
+    date: "Nov 2025",
+    summary:
+      "Post from my host organization in Cleveland about the Youth Ambassadors delegation I was part of, including host families, campus visits, and cultural exchange.",
+    image: "thumbs/ccwa.png",
+    url: "https://www.facebook.com/WorldWideCleveland/posts/1227281619432972/",
+  },
+  {
+    title: "Expotécnica 2025: I judged 3 unforgettable STEAM projects",
+    source: "Randy Valverde — YouTube",
+    date: "Dec 2025",
+    summary:
+      "A STEAM judge's recap of the Expotécnica 2025 finals, featuring Moody, the app I built as one of the three standout projects.",
+    image: "https://cied.georgetown.edu/wp-content/uploads/sites/323/2026/09/Josimar-and-Teamates-Moody-1024x876.jpg",
+    url: "https://youtu.be/sL6j53F78GY",
+  },
+];
+
+(function () {
+  const link = document.getElementById("articleLink");
+  if (!link) return;
+
+  const source = document.getElementById("articleSource");
+  const date = document.getElementById("articleDate");
+  const image = document.getElementById("articleImage");
+  const title = document.getElementById("articleTitle");
+  const summary = document.getElementById("articleSummary");
+  const dotsWrap = document.getElementById("articleDots");
+  const prevBtn = document.getElementById("articlePrev");
+  const nextBtn = document.getElementById("articleNext");
+  let index = 0;
+
+  function render() {
+    const article = ARTICLES[index];
+    link.href = article.url;
+    source.textContent = article.source;
+    date.textContent = article.date;
+    image.src = article.image;
+    image.alt = article.title;
+    title.textContent = article.title;
+    summary.textContent = article.summary;
+    [...dotsWrap.children].forEach((dot, i) =>
+      dot.classList.toggle("active", i === index),
+    );
+  }
+
+  ARTICLES.forEach((_, i) => {
+    const dot = document.createElement("button");
+    dot.className = "dot";
+    dot.type = "button";
+    dot.setAttribute("aria-label", `Show article ${i + 1}`);
+    dot.addEventListener("click", () => {
+      index = i;
+      render();
+    });
+    dotsWrap.appendChild(dot);
+  });
+
+  prevBtn.addEventListener("click", () => {
+    index = (index - 1 + ARTICLES.length) % ARTICLES.length;
+    render();
+  });
+  nextBtn.addEventListener("click", () => {
+    index = (index + 1) % ARTICLES.length;
+    render();
+  });
+
+  render();
+})();
+
 // ===== roblox games carousel =====
 // add a game by pushing another object to this array
 const ROBLOX_GAMES = [
