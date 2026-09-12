@@ -417,6 +417,16 @@ const ARTICLES = [
     image: "https://cied.georgetown.edu/wp-content/uploads/sites/323/2026/09/Josimar-and-Teamates-Moody-1024x876.jpg",
     url: "https://youtu.be/sL6j53F78GY",
   },
+  {
+    title: "Limonenses reciben becas para aprender inglés",
+    source: "U.S. Embassy San Jose",
+    date: "Mar 2024",
+    summary:
+      "Coverage of the 28 Limón students selected for the Access English scholarship program, which I was selected for in 2024.",
+    image:
+      "https://cr.usembassy.gov/wp-content/uploads/sites/129/2024/03/MicrosoftTeams-image-12-1.jpg",
+    url: "https://cr.usembassy.gov/es/limonenses-reciben-becas-para-aprender-ingles/",
+  },
 ];
 
 (function () {

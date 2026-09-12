@@ -26,6 +26,7 @@ The site is a static, responsive portfolio with an interactive playground. It is
 - **Sumobot: Equipo BMO:** Autonomous ESP32-based sumo robot programmed with CircuitPython and presented at two editions of Maker Faire San José.
 - **Aion:** Student-led platform connecting a school community of 1,000+ learners with academic and leadership opportunities.
 - **Jasiel's PytoClicker:** Python and Tkinter autoclicker with configurable clicking, hotkeys, and a class-based architecture.
+- **Lyrics Reader:** Python desktop utility for searching and reading song lyrics one line at a time, with LRCLIB integration, local caching, Unicode support, and keyboard controls.
 
 ### Experience & Achievements (`#experience`)
 
