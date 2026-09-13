@@ -371,6 +371,17 @@
 // Add another article object here when you have a real page to feature.
 const ARTICLES = [
   {
+    title:
+      "De Limón a Georgetown: Josimar Madrigal convirtió un intercambio estudiantil en proyectos de tecnología y accesibilidad",
+    source: "Delfino.cr",
+    date: "Sep 2026",
+    summary:
+      "Perfil sobre mi experiencia en Youth Ambassadors y los proyectos de accesibilidad, robótica y servicio comunitario que desarrollé al regresar a Limón.",
+    image:
+      "https://d1qqtien6gys07.cloudfront.net/wp-content/uploads/2026/09/Josimar_Scout-1536x1152.jpeg",
+    url: "https://delfino.cr/2026/09/de-limon-a-georgetown-josimar-madrigal-convirtio-un-intercambio-estudiantil-en-proyectos-de-tecnologia-y-accesibilidad",
+  },
+  {
     title: "Connecting Communities Through Tech and Leadership",
     source: "Georgetown University — CIED",
     date: "Sep 2026",
