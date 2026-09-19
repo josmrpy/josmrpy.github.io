@@ -1,10 +1,11 @@
 :root {
-  --ink: #1f1f1d;
+  --ink: #1c1b18;
   --paper: #ffffff;
-  --panel: #fafaf8;
-  --border: #e4e2dc;
+  --panel: #fcfbf9;
+  --article: #f4f3ee;
+  --border: #e3e1d9;
+  --muted: #6b6963;
   --accent: #b30a48;
-  --muted: #6e6e6e;
   --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
@@ -59,7 +60,7 @@ section > p.lead {
   position: absolute;
   z-index: -1;
   inset: 0 calc(50% - 50vw);
-  background: #f5f4ef;
+  background: var(--article);
 }
 
 .section-heading .eyebrow {
