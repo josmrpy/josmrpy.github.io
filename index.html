@@ -6,11 +6,20 @@
   <title>josmr.py | Hello, World!</title>
   <link rel="icon" href="favicon.ico?v=1" sizes="any" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Portfolio of Josimar Madrigal (josmr.py): student developer from Costa Rica working on accessibility, civic tech, robotics and networking." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Josimar Madrigal | josmr.py" />
+  <meta property="og:description"
+    content="Student developer from Costa Rica: accessibility, civic tech, robotics and networking." />
+  <meta property="og:image" content="https://github.com/josmrpy/josmrpy/raw/main/banner.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav aria-label="Main">
     <a href="#home">home</a>
     <a href="#about">about</a>
     <a href="#projects">projects</a>
@@ -21,749 +30,763 @@
     <a href="#contact">contact</a>
   </nav>
 
-  <!-- Featured articles -->
-  <section id="featured-articles" class="featured-articles">
-    <div class="section-heading">
-      <p class="eyebrow">Featured elsewhere</p>
-      <h2>Where I've shown up</h2>
-    </div>
-    <div class="article-carousel" aria-label="Featured articles">
-      <button class="carousel-arrow" id="articlePrev" aria-label="Previous article">
-        &#8592;
-      </button>
-      <div class="article-track">
-        <a class="article-slide" id="articleLink" target="_blank" rel="noopener">
-          <img class="article-thumb" id="articleImage" alt="" />
-          <div class="article-content">
-            <div class="article-meta">
-              <span id="articleSource"></span>
-              <span id="articleDate"></span>
+  <main id="main">
+    <!-- Featured articles -->
+    <section id="featured-articles" class="featured-articles" aria-labelledby="featuredTitle">
+      <div class="section-heading">
+        <p class="eyebrow">Featured elsewhere</p>
+        <p class="featured-title" id="featuredTitle">Where I've shown up</p>
+      </div>
+      <div class="article-carousel" aria-label="Featured articles">
+        <button class="carousel-arrow" id="articlePrev" aria-label="Previous article">
+          &#8592;
+        </button>
+        <div class="article-track" aria-live="polite">
+          <a class="article-slide" id="articleLink" target="_blank" rel="noopener">
+            <img class="article-thumb" id="articleImage" alt="" />
+            <div class="article-content">
+              <div class="article-meta">
+                <span id="articleSource"></span>
+                <span id="articleDate"></span>
+              </div>
+              <h3 id="articleTitle"></h3>
+              <p id="articleSummary"></p>
+              <span class="article-cta">Read article &#8594;</span>
             </div>
-            <h3 id="articleTitle"></h3>
-            <p id="articleSummary"></p>
-            <span class="article-cta">Read article &#8594;</span>
-          </div>
-        </a>
-      </div>
-      <button class="carousel-arrow" id="articleNext" aria-label="Next article">
-        &#8594;
-      </button>
-    </div>
-    <div class="carousel-dots" id="articleDots" aria-label="Choose an article"></div>
-  </section>
-
-  <!-- Home -->
-  <section id="home">
-    <div class="hero-shell">
-      <div class="hero-copy">
-        <p class="eyebrow">
-          <span class="img-wrap">
-            <img src="favicon.ico?v=1" class="portfolio-favicon" alt="Portfolio favicon" />
-          </span>
-          Hello, World! This is my portfolio.
-        </p>
-        <h1>Josimar Madrigal <span class="accent">› josmr.py</span></h1>
-        <p class="hero-bio">
-          Young Computer Science enthusiast and member of the Scouting
-          movement, focused on impact-driven projects across STEM, IT,
-          education, intercultural communication, and robotics.
-        </p>
-        <ul class="highlights">
-          <li>Top 5 National STEM Fair Finalist · Costa Rica, 2025</li>
-          <li>Developer of Moody, an AAC communication app</li>
-          <li>Cisco Networking Academy Certified</li>
-          <li>Stanford Code in Place 2026 Graduate</li>
-          <li>Youth Ambassadors Program Exchange Alumnus</li>
-        </ul>
-        <div class="hero-actions">
-          <span class="hero-note">Click the sumobot to explore my links and projects. Some tools
-            below, too. ➜</span>
+          </a>
         </div>
+        <button class="carousel-arrow" id="articleNext" aria-label="Next article">
+          &#8594;
+        </button>
       </div>
+      <div class="carousel-dots" id="articleDots" aria-label="Choose an article"></div>
+    </section>
 
-      <div class="hero-visual">
-        <div class="car-menu-wrap">
-          <img src="sumo.png" id="carTrigger" alt="Open Josimar's featured links" />
-          <div class="car-menu" id="carMenu">
-            <div class="menu-panel">
-              <p class="menu-title">Featured links</p>
-              <a class="project-card" href="https://josmrpy.github.io/PJGYS-2026/" target="_blank" rel="noopener">
-                <img class="card-thumb" src="thumbs/fraccion.png" alt="" />
-                <span>
-                  <strong>PJGYS 2026</strong>
-                  <small>Parlamento Joven Guía y Scout 2026</small>
-                </span>
-              </a>
-              <a class="project-card" href="https://linktr.ee/moodyapp/" target="_blank" rel="noopener">
-                <img class="card-thumb" src="thumbs/moody.png" alt="" />
-                <span>
-                  <strong>Moody</strong>
-                  <small>An AAC communication app</small>
-                </span>
-              </a>
-              <a class="project-card" href="https://linktr.ee/aion.huellas.cr/" target="_blank" rel="noopener">
-                <img class="card-thumb" src="thumbs/aion.png" alt="" />
-                <span>
-                  <strong>Aion</strong>
-                  <small>Academic Information & Opportunity Network</small>
-                </span>
-              </a>
-              <a class="project-card" href="https://linktr.ee/smileseekers.cr/" target="_blank" rel="noopener">
-                <img class="card-thumb" src="thumbs/smileseekers.png" alt="" />
-                <span>
-                  <strong>Smile Seekers</strong>
-                  <small>Community Health Initiative</small>
-                </span>
-              </a>
-              <a class="project-card" href="https://github.com/josmrpy/lyrics-reader" target="_blank" rel="noopener">
-                <img class="card-thumb" src="https://raw.githubusercontent.com/josmrpy/lyrics-reader/main/assets/music.gif" alt="" />
-                <span>
-                  <strong>Lyrics Reader</strong>
-                  <small>Python desktop lyrics utility</small>
-                </span>
-              </a>
-              <div class="social-links">
-                <a href="https://github.com/josmrpy" target="_blank" rel="noopener">GitHub</a>
-                <a href="https://www.linkedin.com/in/josimar-madrigal/" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="https://www.instagram.com/josmr.py/" target="_blank" rel="noopener">Instagram</a>
+    <!-- Home -->
+    <section id="home">
+      <div class="hero-shell">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="img-wrap">
+              <img src="favicon.ico?v=1" class="portfolio-favicon" alt="" />
+            </span>
+            Hello, World! This is my portfolio.
+          </p>
+          <h1>Josimar Madrigal <span class="accent">› josmr.py</span></h1>
+          <p class="hero-bio">
+            Young Computer Science enthusiast and member of the Scouting
+            movement, focused on impact-driven projects across STEM, IT,
+            education, intercultural communication, and robotics.
+          </p>
+          <ul class="highlights">
+            <li>Top 5 National STEM Fair Finalist · Costa Rica, 2025</li>
+            <li>Developer of Moody, an AAC communication app</li>
+            <li>Cisco Networking Academy Certified</li>
+            <li>Stanford Code in Place 2026 Graduate</li>
+            <li>Youth Ambassadors Program Exchange Alumnus</li>
+          </ul>
+          <div class="hero-actions">
+            <span class="hero-note">Click the sumobot to explore my links and projects. Some tools
+              below, too. ➜</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="sumo-menu-wrap">
+            <button type="button" class="sumo-trigger" id="sumoTrigger" aria-expanded="false" aria-controls="sumoMenu"
+              aria-label="Open Josimar's featured links">
+              <img src="sumo.png" alt="" />
+            </button>
+            <div class="sumo-menu" id="sumoMenu">
+              <div class="menu-panel">
+                <p class="menu-title">Featured links</p>
+                <a class="project-card" href="https://josmrpy.github.io/PJGYS-2026/" target="_blank" rel="noopener">
+                  <img class="card-thumb" loading="lazy" src="thumbs/fraccion.png" alt="" />
+                  <span>
+                    <strong>PJGYS 2026</strong>
+                    <small>Parlamento Joven Guía y Scout 2026</small>
+                  </span>
+                </a>
+                <a class="project-card" href="https://linktr.ee/moodyapp/" target="_blank" rel="noopener">
+                  <img class="card-thumb" loading="lazy" src="thumbs/moody.png" alt="" />
+                  <span>
+                    <strong>Moody</strong>
+                    <small>An AAC communication app</small>
+                  </span>
+                </a>
+                <a class="project-card" href="https://linktr.ee/aion.huellas.cr/" target="_blank" rel="noopener">
+                  <img class="card-thumb" loading="lazy" src="thumbs/aion.png" alt="" />
+                  <span>
+                    <strong>Aion</strong>
+                    <small>Academic Information &amp; Opportunity Network</small>
+                  </span>
+                </a>
+                <a class="project-card" href="https://linktr.ee/smileseekers.cr/" target="_blank" rel="noopener">
+                  <img class="card-thumb" loading="lazy" src="thumbs/smileseekers.png" alt="" />
+                  <span>
+                    <strong>Smile Seekers</strong>
+                    <small>Community Health Initiative</small>
+                  </span>
+                </a>
+                <a class="project-card" href="https://github.com/josmrpy/lyrics-reader" target="_blank" rel="noopener">
+                  <img class="card-thumb" loading="lazy"
+                    src="https://raw.githubusercontent.com/josmrpy/lyrics-reader/main/assets/music.gif" alt="" />
+                  <span>
+                    <strong>Lyrics Reader</strong>
+                    <small>Python desktop lyrics utility</small>
+                  </span>
+                </a>
+                <div class="social-links">
+                  <a href="https://github.com/josmrpy" target="_blank" rel="noopener">GitHub</a>
+                  <a href="https://www.linkedin.com/in/josimar-madrigal/" target="_blank" rel="noopener">LinkedIn</a>
+                  <a href="https://www.instagram.com/josmr.py/" target="_blank" rel="noopener">Instagram</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <hr class="divider" />
+    <hr class="divider" />
 
-  <!-- About -->
-  <section id="about">
-    <img src="https://github.com/josmrpy/josmrpy/raw/main/banner.png" class="about-banner" alt="Banner" />
-    <h2>About me</h2>
-    <p class="lead">
-      A bit about me, my interests, and what drives me to build and
-      contribute.
-    </p>
-    <div class="about-shell">
-      <div class="about-photo-slot">
-        <img class="about-photo-placeholder" src="https://github.com/josmrpy.png" alt="Josimar Madrigal" />
+    <!-- About -->
+    <section id="about">
+      <img src="https://github.com/josmrpy/josmrpy/raw/main/banner.png" class="about-banner"
+        alt="Josimar Madrigal (josmr.py) profile banner" loading="lazy" />
+      <h2>About me</h2>
+      <p class="lead">
+        A bit about me, my interests, and what drives me to build and
+        contribute.
+      </p>
+      <div class="about-shell">
+        <div class="about-photo-slot">
+          <img class="about-photo" src="https://github.com/josmrpy.png" alt="Josimar Madrigal" loading="lazy" />
+        </div>
+        <div class="about-copy">
+          <p class="about-bio">
+            I'm a Costa Rican student finishing a technical diploma in Network
+            Configuration, Communications Support and Operating Systems at CTP
+            Limón. I'm deeply interested in computer science and programming,
+            and I like getting involved in things where I can learn, build,
+            and contribute. I often end up turning that curiosity into
+            projects of my own — from an AAC app and small platforms to a
+            sumo-fighting robot and simple tools built to solve everyday
+            problems. I'm also drawn to intercultural experiences, civic
+            projects, and youth leadership, and I enjoy getting involved in
+            communities and initiatives beyond the classroom.
+          </p>
+          <p class="about-bio">
+            What ties most of it together is a simple idea: technology is most
+            interesting to me when it can solve a real problem. I'm
+            particularly interested in accessibility and civic participation,
+            where software and technical skills can make information,
+            communication, and opportunities easier to reach.
+          </p>
+          <dl class="quick-facts">
+            <div>
+              <dt>Based in</dt>
+              <dd>Limón, Costa Rica</dd>
+            </div>
+            <div>
+              <dt>Education</dt>
+              <dd>CTP Limón — Networks &amp; Operating Systems, Dec 2026</dd>
+            </div>
+            <div>
+              <dt>Languages</dt>
+              <dd>Spanish (native) · English (B2)</dd>
+            </div>
+            <div>
+              <dt>What I do</dt>
+              <dd>
+                Programming · Building projects · Technology · Intercultural
+                experiences · Civic engagement
+              </dd>
+            </div>
+          </dl>
+        </div>
       </div>
-      <div class="about-copy">
-        <p class="about-bio">
-          I'm a Costa Rican student finishing a technical diploma in Network
-          Configuration, Communications Support and Operating Systems at CTP
-          Limón. I'm deeply interested in computer science and programming,
-          and I like getting involved in things where I can learn, build, and
-          contribute. I often end up turning that curiosity into projects of
-          my own — from an AAC app and small platforms to a sumo-fighting
-          robot and simple tools built to solve everyday problems. I'm also
-          drawn to intercultural experiences, civic projects, and youth
-          leadership, and I enjoy getting involved in communities and
-          initiatives beyond the classroom.
-        </p>
-        <p class="about-bio">
-          What ties most of it together is a simple idea: technology is most
-          interesting to me when it can solve a real problem. I'm particularly
-          interested in accessibility and civic participation, where software
-          and technical skills can make information, communication, and
-          opportunities easier to reach.
-        </p>
-        <dl class="quick-facts">
-          <div>
-            <dt>Based in</dt>
-            <dd>Limón, Costa Rica</dd>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <p class="lead">
+        A selection of projects I've designed, built, and contributed to.
+      </p>
+
+      <div class="projects-grid">
+        <article class="project-tile">
+          <div class="project-tile-head">
+            <h3>Moody: Colors That Speak</h3>
+            <span class="project-tag">AAC · Accessibility</span>
           </div>
-          <div>
-            <dt>Education</dt>
-            <dd>CTP Limón — Networks &amp; Operating Systems, Dec 2026</dd>
+          <p>
+            An AAC (Augmentative and Alternative Communication) app designed
+            to support communication through ARASAAC pictograms, accompanied
+            by an ESP32-based wearable prototype for expressing emotional
+            states. Selected among the Top 5 nationally at ExpoTécnica 2025
+            from 60+ competing projects.
+          </p>
+        </article>
+
+        <article class="project-tile">
+          <div class="project-tile-head">
+            <h3>PJGYS 2026</h3>
+            <span class="project-tag">Web · Civic tech</span>
           </div>
-          <div>
-            <dt>Languages</dt>
-            <dd>Spanish (native) · English (B2)</dd>
+          <p>
+            Web platform developed for Parlamento Joven Guía y Scout Costa
+            Rica 2026, used to publish and organize 11 legislative proposals
+            with PDF viewing, search, filtering, and progress tracking. I also
+            authored Proposal #6 on communicative accessibility in public
+            spaces, which was selected by my fraction.
+          </p>
+        </article>
+
+        <article class="project-tile">
+          <div class="project-tile-head">
+            <h3>Sumobot competition</h3>
+            <span class="project-tag">Robotics</span>
           </div>
-          <div>
-            <dt>What I do</dt>
-            <dd>
-              Programming · Building projects · Technology · Intercultural
-              experiences · Civic engagement
-            </dd>
+          <p>
+            Autonomous sumo-fighting robot built on an ESP32-based board with
+            CircuitPython. The team competed at Maker Faire San José in two
+            consecutive editions, alongside 190+ participating teams each
+            year. I maintain the embedded codebase and help mentor incoming
+            teammates.
+          </p>
+        </article>
+
+        <article class="project-tile">
+          <div class="project-tile-head">
+            <h3>Aion: Academic Information &amp; Opportunity Network</h3>
+            <span class="project-tag">Web · Community</span>
           </div>
-        </dl>
+          <p>
+            A student-led web platform I helped build to connect a school
+            community of 1,000+ learners with academic and leadership
+            opportunities. More than 50 opportunities have been organized and
+            published so far, combining student-submitted listings with
+            stories and practical information.
+          </p>
+        </article>
+
+        <article class="project-tile">
+          <div class="project-tile-head">
+            <h3>PytoClicker</h3>
+            <span class="project-tag">Python · Desktop</span>
+          </div>
+          <p>
+            A lightweight Python autoclicker built with Tkinter, featuring
+            configurable clicking, hotkey controls, and a minimal desktop
+            interface. The project was also an exercise in restructuring a
+            small application into a cleaner class-based architecture.
+          </p>
+        </article>
+
+        <article class="project-tile">
+          <div class="project-tile-head">
+            <h3>Lyrics Reader</h3>
+            <span class="project-tag">Python · Desktop · API</span>
+          </div>
+          <p>
+            A desktop utility for finding and reading song lyrics one line at
+            a time. It checks a local JSON cache before querying LRCLIB,
+            supports Unicode lyrics, and includes keyboard controls for moving
+            through each verse.
+          </p>
+        </article>
       </div>
-    </div>
-  </section>
+      <p class="project-note">
+        Links for the ones I've made public are under the sumobot menu in the
+        home section — not all of these are open-source yet.
+      </p>
+    </section>
 
-  <hr class="divider" />
+    <hr class="divider" />
 
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <p class="lead">
-      A selection of projects I've designed, built, and contributed to.
-    </p>
+    <!-- Experience & Achievements -->
+    <section id="experience">
+      <h2>Experience &amp; Achievements</h2>
+      <p class="lead">
+        Experiences, programs, and leadership roles that have shaped how I
+        work.
+      </p>
 
-    <div class="projects-grid">
-      <article class="project-tile">
-        <div class="project-tile-head">
-          <h3>Moody: Colors That Speak</h3>
-          <span class="project-tag">AAC · Accessibility</span>
-        </div>
-        <p>
-          An AAC (Augmentative and Alternative Communication) app designed to
-          support communication through ARASAAC pictograms, accompanied by an
-          ESP32-based wearable prototype for expressing emotional states.
-          Selected among the Top 5 nationally at ExpoTécnica 2025 from 60+
-          competing projects.
-        </p>
-      </article>
-
-      <article class="project-tile">
-        <div class="project-tile-head">
-          <h3>PJGYS 2026</h3>
-          <span class="project-tag">Web · Civic tech</span>
-        </div>
-        <p>
-          Web platform developed for Parlamento Joven Guía y Scout Costa Rica
-          2026, used to publish and organize 11 legislative proposals with PDF
-          viewing, search, filtering, and progress tracking. I also authored
-          Proposal #6 on communicative accessibility in public spaces, which
-          was selected by my fraction.
-        </p>
-      </article>
-
-      <article class="project-tile">
-        <div class="project-tile-head">
-          <h3>Sumobot competition</h3>
-          <span class="project-tag">Robotics</span>
-        </div>
-        <p>
-          Autonomous sumo-fighting robot built on an ESP32-based board with
-          CircuitPython. The team competed at Maker Faire San José in two
-          consecutive editions, alongside 190+ participating teams each year.
-          I maintain the embedded codebase and help mentor incoming teammates.
-        </p>
-      </article>
-
-      <article class="project-tile">
-        <div class="project-tile-head">
-          <h3>Aion: Academic Information & Opportunity Network</h3>
-          <span class="project-tag">Web · Community</span>
-        </div>
-        <p>
-          A student-led web platform I helped build to connect a school
-          community of 1,000+ learners with academic and leadership
-          opportunities. More than 50 opportunities have been organized and
-          published so far, combining student-submitted listings with stories
-          and practical information.
-        </p>
-      </article>
-
-      <article class="project-tile">
-        <div class="project-tile-head">
-          <h3>Jasiel's PytoClicker</h3>
-          <span class="project-tag">Python · Desktop</span>
-        </div>
-        <p>
-          A lightweight Python autoclicker built with Tkinter, featuring
-          configurable clicking, hotkey controls, and a minimal desktop
-          interface. The project was also an exercise in restructuring a small
-          application into a cleaner class-based architecture.
-        </p>
-      </article>
-
-      <article class="project-tile">
-        <div class="project-tile-head">
-          <h3>Lyrics Reader</h3>
-          <span class="project-tag">Python · Desktop · API</span>
-        </div>
-        <p>
-          A desktop utility for finding and reading song lyrics one line at a
-          time. It checks a local JSON cache before querying LRCLIB, supports
-          Unicode lyrics, and includes keyboard controls for moving through
-          each verse.
-        </p>
-      </article>
-    </div>
-    <p class="project-note">
-      Links for the ones I've made public are under the sumobot menu at the
-      top of the page — not all of these are open-source yet.
-    </p>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- Experience & Achievements -->
-  <section id="experience">
-    <h2>Experience &amp; Achievements</h2>
-    <p class="lead">
-      Experiences, programs, and leadership roles that have shaped how I work.
-    </p>
-
-    <ul class="timeline">
-      <li>
-        <span class="timeline-date">Sep 2024</span>
-        <div>
-          <h3>Parlamento Joven Caribe 2024</h3>
-          <p>
-            Youth civic participation and leadership program organized in
-            partnership with Costa Rica's Legislative Assembly.
-          </p>
-        </div>
-      </li>
-      <li>
-        <span class="timeline-date">2025</span>
-        <div>
-          <h3>ExpoTécnica Nacional</h3>
-          <p>
-            Top 5 national STEM finalist with Moody, among 60+ competing
-            projects.
-          </p>
-        </div>
-      </li>
-      <li>
-        <span class="timeline-date">Oct–Nov 2025</span>
-        <div>
-          <h3>Youth Ambassadors Program — U.S. Department of State</h3>
-          <p>
-            Selected as 1 of 8 students from Costa Rica for a leadership and
-            intercultural exchange program organized with the U.S. Embassy and
-            Georgetown University.
-          </p>
-        </div>
-      </li>
-      <li>
-        <span class="timeline-date">May–Nov 2025</span>
-        <div>
-          <h3>Consejo Participativo — Patronato Nacional de la Infancia</h3>
-          <p>
-            Participated in youth consultation and advocacy activities focused
-            on children's and adolescents' rights, including workshops and
-            talks on human rights and mental health in rural communities.
-          </p>
-        </div>
-      </li>
-      <li>
-        <span class="timeline-date">Jul–Aug 2026</span>
-        <div>
-          <h3>Parlamento Joven Guía y Scout</h3>
-          <p>
-            Authored a legislative proposal promoting communicative
-            accessibility in public spaces, which was selected by my fraction
-            for the parliamentary process.
-          </p>
-        </div>
-      </li>
-      <li>
-        <span class="timeline-date">2025</span>
-        <div>
-          <h3>Vice President of the Assembly of Representatives</h3>
-          <p>
-            Served as Vice President of the Assembly of Representatives at CTP
-            Limón, participating in student representation, decision-making,
-            and electoral processes involving two student parties.
-          </p>
-        </div>
-      </li>
-
-      <li>
-        <span class="timeline-date">2026</span>
-        <div>
-          <h3>Student Electoral Tribunal</h3>
-          <p>
-            President of the Student Electoral Tribunal at CTP Limón,
-            overseeing student elections, party registration, electoral
-            procedures, and related disciplinary matters involving four
-            student parties.
-          </p>
-        </div>
-      </li>
-      <li>
-        <span class="timeline-date">2026 – Present</span>
-        <div>
-          <h3>
-            Protagonista de grupo — Asociación de Guías y Scouts de Costa Rica
-          </h3>
-          <p>
-            Active Protagonista de Grupo 144, contributing to community
-            activities, youth leadership, and civic formation programs.
-          </p>
-        </div>
-      </li>
-      <li>
-        <span class="timeline-date">2026</span>
-        <div>
-          <h3>TeachNow Volunteer Mentor — Code in Place</h3>
-          <p>
-            Volunteer mentor for Stanford University's Code in Place,
-            supporting students as they worked through introductory Python
-            programming and problem-solving exercises.
-          </p>
-        </div>
-      </li>
-    </ul>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="panel">
-        <h3>Programming &amp; Software</h3>
-        <ul>
-          <li>Python</li>
-          <li>CircuitPython</li>
-          <li>Lua</li>
-          <li>Application Development</li>
-          <li>Programming &amp; Debugging</li>
-          <li>UI &amp; Interaction Design</li>
-        </ul>
-      </div>
-
-      <div class="panel">
-        <h3>Networks &amp; Systems</h3>
-        <ul>
-          <li>Network Configuration</li>
-          <li>TCP/IP &amp; Subnetting</li>
-          <li>Cisco Networking</li>
-          <li>Network Troubleshooting</li>
-          <li>Windows &amp; Linux</li>
-        </ul>
-      </div>
-
-      <div class="panel">
-        <h3>Hardware &amp; Robotics</h3>
-        <ul>
-          <li>ESP32</li>
-          <li>Embedded Systems</li>
-          <li>Sensors &amp; Electronics</li>
-          <li>Prototyping</li>
-          <li>Robotics</li>
-        </ul>
-      </div>
-
-      <div class="panel">
-        <h3>Tools &amp; Productivity</h3>
-        <ul>
-          <li>Git &amp; GitHub</li>
-          <li>VS Code</li>
-          <li>Thonny</li>
-          <li>Cisco Packet Tracer</li>
-          <li>Microsoft Word · PowerPoint · Excel</li>
-          <li>AI-assisted productivity tools</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- Education -->
-  <section id="education">
-    <h2>Education</h2>
-
-    <ul class="education-list">
-      <li>
-        <div>
-          <h3>
-            Technical Diploma — Network Configuration, Communications Support
-            &amp; Operating Systems
-          </h3>
-          <p>Colegio Técnico Profesional de Limón</p>
-        </div>
-        <span class="education-date">Expected Dec 2026</span>
-      </li>
-      <li>
-        <div>
-          <h3>High School Diploma</h3>
-          <p>Colegio Técnico Profesional de Limón</p>
-        </div>
-        <span class="education-date">Expected Dec 2026</span>
-      </li>
-      <li>
-        <div>
-          <h3>Access Microscholarship Program (English Access)</h3>
-          <p>Tecnológico de Costa Rica / U.S. Embassy</p>
-        </div>
-        <span class="education-date">Feb 2024 – Apr 2026</span>
-      </li>
-    </ul>
-
-    <details class="cert-details">
-      <summary>View all certifications (14)</summary>
-      <ul class="cert-list">
+      <ul class="timeline">
         <li>
-          <span>CCNA: Switching, Routing &amp; Wireless Essentials — Cisco
-            Networking Academy</span><span class="cert-date">Nov 2025</span>
+          <span class="timeline-date">2026 – Present</span>
+          <div>
+            <h3>
+              Protagonista de grupo — Asociación de Guías y Scouts de Costa
+              Rica
+            </h3>
+            <p>
+              Active Protagonista de Grupo 144, contributing to community
+              activities, youth leadership, and civic formation programs.
+            </p>
+          </div>
         </li>
         <li>
-          <span>CCNA: Introduction to Networks — Cisco Networking Academy</span><span class="cert-date">Jun 2025</span>
+          <span class="timeline-date">Jul–Aug 2026</span>
+          <div>
+            <h3>Parlamento Joven Guía y Scout</h3>
+            <p>
+              Authored a legislative proposal promoting communicative
+              accessibility in public spaces, which was selected by my
+              fraction for the parliamentary process.
+            </p>
+          </div>
         </li>
         <li>
-          <span>IT Essentials — Cisco Networking Academy</span><span class="cert-date">Nov 2024</span>
+          <span class="timeline-date">2026</span>
+          <div>
+            <h3>Student Electoral Tribunal</h3>
+            <p>
+              President of the Student Electoral Tribunal at CTP Limón,
+              overseeing student elections, party registration, electoral
+              procedures, and related disciplinary matters involving four
+              student parties.
+            </p>
+          </div>
         </li>
         <li>
-          <span>PCAP: Programming Essentials in Python — Cisco Networking
-            Academy</span><span class="cert-date">Nov 2024</span>
+          <span class="timeline-date">2026</span>
+          <div>
+            <h3>TeachNow Volunteer Mentor — Code in Place</h3>
+            <p>
+              Volunteer mentor for Stanford University's Code in Place,
+              supporting students as they worked through introductory Python
+              programming and problem-solving exercises.
+            </p>
+          </div>
         </li>
         <li>
-          <span>Python Essentials 2 — Cisco Networking Academy</span><span class="cert-date">May 2026</span>
+          <span class="timeline-date">Oct–Nov 2025</span>
+          <div>
+            <h3>Youth Ambassadors Program — U.S. Department of State</h3>
+            <p>
+              Selected as 1 of 8 students from Costa Rica for a leadership and
+              intercultural exchange program organized with the U.S. Embassy
+              and Georgetown University.
+            </p>
+          </div>
         </li>
         <li>
-          <span>Junior Cybersecurity Analyst Career Path — Cisco Networking
-            Academy</span><span class="cert-date">Jun 2026</span>
+          <span class="timeline-date">May–Nov 2025</span>
+          <div>
+            <h3>Consejo Participativo — Patronato Nacional de la Infancia</h3>
+            <p>
+              Participated in youth consultation and advocacy activities
+              focused on children's and adolescents' rights, including
+              workshops and talks on human rights and mental health in rural
+              communities.
+            </p>
+          </div>
         </li>
         <li>
-          <span>Introduction to Data Science — Cisco Networking Academy</span><span class="cert-date">Apr 2026</span>
+          <span class="timeline-date">2025</span>
+          <div>
+            <h3>ExpoTécnica Nacional</h3>
+            <p>
+              Top 5 national STEM finalist with Moody, among 60+ competing
+              projects.
+            </p>
+          </div>
         </li>
         <li>
-          <span>Introduction to Modern AI — Cisco Networking Academy</span><span class="cert-date">Apr 2026</span>
+          <span class="timeline-date">2025</span>
+          <div>
+            <h3>Vice President of the Assembly of Representatives</h3>
+            <p>
+              Served as Vice President of the Assembly of Representatives at
+              CTP Limón, participating in student representation,
+              decision-making, and electoral processes involving two student
+              parties.
+            </p>
+          </div>
         </li>
         <li>
-          <span>Code in Place: Programming Fundamentals — Stanford
-            University</span><span class="cert-date">May 2026</span>
-        </li>
-        <li>
-          <span>Agile Project Management Core — Go Beyond</span><span class="cert-date">Apr 2026</span>
-        </li>
-        <li>
-          <span>Scrum Fundamentals Certified — SCRUMstudy Italia</span><span class="cert-date">Apr 2026</span>
-        </li>
-        <li>
-          <span>Project Management Essentials Certified (PMEC) — Management &amp;
-            Strategy Institute</span><span class="cert-date">Mar 2026</span>
-        </li>
-        <li>
-          <span>Cooperativismo: Origen, Desarrollo y Desafíos — CENECOOP
-            R.L.</span><span class="cert-date">2025</span>
-        </li>
-        <li>
-          <span>Participante del Sumobot en Maker Faire San José 2025 —
-            Universidad Cenfotec</span><span class="cert-date">Jul 2025</span>
+          <span class="timeline-date">Sep 2024</span>
+          <div>
+            <h3>Parlamento Joven Caribe 2024</h3>
+            <p>
+              Youth civic participation and leadership program organized in
+              partnership with Costa Rica's Legislative Assembly.
+            </p>
+          </div>
         </li>
       </ul>
-    </details>
-  </section>
+    </section>
 
-  <hr class="divider" />
+    <hr class="divider" />
 
-  <!-- Playground -->
-  <section id="playground">
-    <h2>Playground</h2>
-    <p class="lead">
-      Small interactive tools I've built along the way. Pick one below.
-    </p>
-
-    <div class="playground-tabs" role="tablist">
-      <button class="tab-btn active" data-tab="tab-binary" role="tab" aria-selected="true">
-        Binary counter
-      </button>
-      <button class="tab-btn" data-tab="tab-notes" role="tab" aria-selected="false">
-        Note cards
-      </button>
-      <button class="tab-btn" data-tab="tab-hanoi" role="tab" aria-selected="false">
-        Tower of Hanoi
-      </button>
-      <button class="tab-btn" data-tab="tab-subnetting" role="tab" aria-selected="false">
-        Subnetting
-      </button>
-      <button class="tab-btn" data-tab="tab-roblox" role="tab" aria-selected="false">
-        Roblox games
-      </button>
-    </div>
-
-    <!-- Binary counter -->
-    <div class="tab-panel active" id="tab-binary" data-panel>
-      <p class="lead">
-        Click a bit to flip it, or step through the byte with the buttons.
-      </p>
-      <div class="panel">
-        <div class="bit-values">
-          <span>128</span><span>64</span><span>32</span><span>16</span>
-          <span>8</span><span>4</span><span>2</span><span>1</span>
-        </div>
-        <div class="byte-row" id="byteRow"></div>
-        <div class="binary-readout">
-          <div class="decimal" id="decimalOut">0</div>
-          <div id="binaryOut">00000000</div>
-        </div>
-        <div class="binary-controls">
-          <button class="btn-ghost" id="decBtn">-1</button>
-          <button class="btn-ghost" id="incBtn">+1</button>
-          <button class="btn-ghost" id="resetBtn">reset</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Note cards -->
-    <div class="tab-panel" id="tab-notes" data-panel>
-      <p class="lead">
-        Write a card, share the link, whoever opens it sees it straight away.
-        Cards you save stick around in this browser only.
-      </p>
-
-      <div id="sharedBanner"></div>
-
-      <div class="panel">
-        <div class="note-form">
-          <div class="note-form-row">
-            <input type="text" id="noteTitle" placeholder="Title (optional)" />
-          </div>
-          <textarea id="noteBody" placeholder="Write something..."></textarea>
-          <div>
-            <button class="btn" id="addNoteBtn">Add card</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="card-grid" id="cardGrid"></div>
-      <p class="empty-hint" id="emptyHint">No cards yet — add one above.</p>
-    </div>
-
-    <!-- Tower of Hanoi -->
-    <div class="tab-panel" id="tab-hanoi" data-panel>
-      <p class="lead">
-        Click a peg to pick up its top disc, click another peg to drop it
-        there. Move every disc onto the last peg.
-      </p>
-
-      <div class="hanoi-controls">
-        <label for="discCount" class="hanoi-label">discs:</label>
-        <select id="discCount">
-          <option value="3">3</option>
-          <option value="4" selected>4</option>
-          <option value="5">5</option>
-        </select>
-        <button class="btn-ghost" id="hanoiReset">reset</button>
-      </div>
-
-      <div class="hanoi-board" id="hanoiBoard"></div>
-      <p class="hanoi-status" id="hanoiStatus">Moves: 0</p>
-    </div>
-
-    <!-- Subnetting cheat sheet -->
-    <div class="tab-panel" id="tab-subnetting" data-panel>
-      <p class="lead">
-        Octet rules, the formulas, a full prefix reference table, and a quick
-        calculator.
-      </p>
-
-      <div class="rule-grid">
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
         <div class="panel">
-          <h3>Octet rules</h3>
+          <h3>Programming &amp; Software</h3>
           <ul>
-            <li>4 octets, 8 bits each, 0–255 per octet</li>
-            <li>Class A: 1–126, default mask /8</li>
-            <li>Class B: 128–191, default mask /16</li>
-            <li>Class C: 192–223, default mask /24</li>
-            <li>127.x = loopback</li>
+            <li>Python</li>
+            <li>CircuitPython</li>
+            <li>Lua</li>
+            <li>Application Development</li>
+            <li>Programming &amp; Debugging</li>
+            <li>UI &amp; Interaction Design</li>
           </ul>
         </div>
+
         <div class="panel">
-          <h3>Private ranges</h3>
+          <h3>Networks &amp; Systems</h3>
           <ul>
-            <li>10.0.0.0/8</li>
-            <li>172.16.0.0/12</li>
-            <li>192.168.0.0/16</li>
+            <li>Network Configuration</li>
+            <li>TCP/IP &amp; Subnetting</li>
+            <li>Cisco Networking</li>
+            <li>Network Troubleshooting</li>
+            <li>Windows &amp; Linux</li>
           </ul>
         </div>
+
         <div class="panel">
-          <h3>Formulas</h3>
+          <h3>Hardware &amp; Robotics</h3>
           <ul>
-            <li>Subnets = 2^s (s = borrowed bits)</li>
-            <li>Hosts/subnet = 2^h − 2 (h = host bits)</li>
-            <li>Block size = 256 − mask octet</li>
-            <li>/31 = 2 usable (point-to-point), /32 = 1 host</li>
+            <li>ESP32</li>
+            <li>Embedded Systems</li>
+            <li>Sensors &amp; Electronics</li>
+            <li>Prototyping</li>
+            <li>Robotics</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Tools &amp; Productivity</h3>
+          <ul>
+            <li>Git &amp; GitHub</li>
+            <li>VS Code</li>
+            <li>Thonny</li>
+            <li>Cisco Packet Tracer</li>
+            <li>Microsoft Word · PowerPoint · Excel</li>
+            <li>AI-assisted productivity tools</li>
           </ul>
         </div>
       </div>
+    </section>
 
-      <div class="panel panel-top">
-        <h3>Prefix reference table</h3>
-        <div class="table-scroll">
-          <table>
-            <thead>
-              <tr>
-                <th>CIDR</th>
-                <th>Subnet mask</th>
-                <th>Block size</th>
-                <th>Usable hosts</th>
-              </tr>
-            </thead>
-            <tbody id="cidrTableBody"></tbody>
-          </table>
-        </div>
-      </div>
+    <hr class="divider" />
 
-      <div class="panel">
-        <h3>Calculator</h3>
-        <div class="calc-form">
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+
+      <ul class="education-list">
+        <li>
           <div>
-            <label for="calcIp">IP address</label>
-            <input type="text" id="calcIp" placeholder="192.168.1.10" value="192.168.1.10" />
+            <h3>
+              Technical Diploma — Network Configuration, Communications
+              Support &amp; Operating Systems
+            </h3>
+            <p>Colegio Técnico Profesional de Limón</p>
           </div>
+          <span class="education-date">Expected Dec 2026</span>
+        </li>
+        <li>
           <div>
-            <label for="calcCidr">CIDR</label>
-            <select id="calcCidr"></select>
+            <h3>High School Diploma</h3>
+            <p>Colegio Técnico Profesional de Limón</p>
           </div>
-          <button class="btn-accent" id="calcBtn">Calculate</button>
-        </div>
-        <p class="calc-error" id="calcError"></p>
-        <div class="calc-results" id="calcResults"></div>
-      </div>
-    </div>
+          <span class="education-date">Expected Dec 2026</span>
+        </li>
+        <li>
+          <div>
+            <h3>Access Microscholarship Program (English Access)</h3>
+            <p>Tecnológico de Costa Rica / U.S. Embassy</p>
+          </div>
+          <span class="education-date">Feb 2024 – Apr 2026</span>
+        </li>
+      </ul>
 
-    <!-- Roblox games -->
-    <div class="tab-panel" id="tab-roblox" data-panel>
+      <details class="cert-details">
+        <summary>View all certifications (14)</summary>
+        <ul class="cert-list">
+          <li>
+            <span>CCNA: Switching, Routing &amp; Wireless Essentials — Cisco
+              Networking Academy</span><span class="cert-date">Nov 2025</span>
+          </li>
+          <li>
+            <span>CCNA: Introduction to Networks — Cisco Networking Academy</span><span class="cert-date">Jun
+              2025</span>
+          </li>
+          <li>
+            <span>IT Essentials — Cisco Networking Academy</span><span class="cert-date">Nov 2024</span>
+          </li>
+          <li>
+            <span>PCAP: Programming Essentials in Python — Cisco Networking
+              Academy</span><span class="cert-date">Nov 2024</span>
+          </li>
+          <li>
+            <span>Python Essentials 2 — Cisco Networking Academy</span><span class="cert-date">May 2026</span>
+          </li>
+          <li>
+            <span>Junior Cybersecurity Analyst Career Path — Cisco Networking
+              Academy</span><span class="cert-date">Jun 2026</span>
+          </li>
+          <li>
+            <span>Introduction to Data Science — Cisco Networking Academy</span><span class="cert-date">Apr 2026</span>
+          </li>
+          <li>
+            <span>Introduction to Modern AI — Cisco Networking Academy</span><span class="cert-date">Apr 2026</span>
+          </li>
+          <li>
+            <span>Code in Place: Programming Fundamentals — Stanford
+              University</span><span class="cert-date">May 2026</span>
+          </li>
+          <li>
+            <span>Agile Project Management Core — Go Beyond</span><span class="cert-date">Apr 2026</span>
+          </li>
+          <li>
+            <span>Scrum Fundamentals Certified — SCRUMstudy Italia</span><span class="cert-date">Apr 2026</span>
+          </li>
+          <li>
+            <span>Project Management Essentials Certified (PMEC) — Management
+              &amp; Strategy Institute</span><span class="cert-date">Mar 2026</span>
+          </li>
+          <li>
+            <span>Cooperativismo: Origen, Desarrollo y Desafíos — CENECOOP
+              R.L.</span><span class="cert-date">2025</span>
+          </li>
+          <li>
+            <span>Participante del Sumobot en Maker Faire San José 2025 —
+              Universidad Cenfotec</span><span class="cert-date">Jul 2025</span>
+          </li>
+        </ul>
+      </details>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Playground -->
+    <section id="playground">
+      <h2>Playground</h2>
       <p class="lead">
-        A few things I've built on Roblox. Use the arrows to browse.
+        Small interactive tools I've built along the way. Pick one below.
       </p>
 
-      <div class="panel">
-        <div class="carousel">
-          <button class="carousel-arrow" id="carouselPrev" aria-label="Previous game">
-            &#8592;
-          </button>
-          <div class="carousel-track">
-            <a class="carousel-slide" id="carouselLink" target="_blank" rel="noopener">
-              <img id="carouselImg" alt="" />
-              <div class="carousel-caption">
-                <h3 id="carouselTitle"></h3>
-                <span class="carousel-cta">Play on Roblox →</span>
-              </div>
-            </a>
-          </div>
-          <button class="carousel-arrow" id="carouselNext" aria-label="Next game">
-            &#8594;
-          </button>
-        </div>
-        <div class="carousel-dots" id="carouselDots"></div>
+      <div class="playground-tabs" role="tablist">
+        <button class="tab-btn active" data-tab="tab-binary" role="tab" aria-selected="true">
+          Binary counter
+        </button>
+        <button class="tab-btn" data-tab="tab-notes" role="tab" aria-selected="false">
+          Note cards
+        </button>
+        <button class="tab-btn" data-tab="tab-hanoi" role="tab" aria-selected="false">
+          Tower of Hanoi
+        </button>
+        <button class="tab-btn" data-tab="tab-subnetting" role="tab" aria-selected="false">
+          Subnetting
+        </button>
+        <button class="tab-btn" data-tab="tab-roblox" role="tab" aria-selected="false">
+          Roblox games
+        </button>
       </div>
-    </div>
-  </section>
 
-  <hr class="divider" />
+      <!-- Binary counter -->
+      <div class="tab-panel active" id="tab-binary" data-panel>
+        <p class="lead">
+          Click a bit to flip it, or step through the byte with the buttons.
+        </p>
+        <div class="panel">
+          <div class="bit-values">
+            <span>128</span><span>64</span><span>32</span><span>16</span>
+            <span>8</span><span>4</span><span>2</span><span>1</span>
+          </div>
+          <div class="byte-row" id="byteRow"></div>
+          <div class="binary-readout">
+            <div class="decimal" id="decimalOut">0</div>
+            <div id="binaryOut">00000000</div>
+          </div>
+          <div class="binary-controls">
+            <button class="btn-ghost" id="decBtn">-1</button>
+            <button class="btn-ghost" id="incBtn">+1</button>
+            <button class="btn-ghost" id="resetBtn">reset</button>
+          </div>
+        </div>
+      </div>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Let's build something.</h2>
-    <p class="lead">
-      Have an idea, a challenge, or a project that could make a difference?
-      Let's talk.
-    </p>
-    <div class="contact-actions">
-      <a class="btn" href="https://github.com/josmrpy" target="_blank" rel="noopener">GitHub</a>
-      <a class="btn-ghost" href="https://www.linkedin.com/in/josimar-madrigal/" target="_blank"
-        rel="noopener">LinkedIn</a>
-      <a class="btn-ghost" href="https://www.instagram.com/josmr.py/" target="_blank" rel="noopener">Instagram</a>
-    </div>
-  </section>
+      <!-- Note cards -->
+      <div class="tab-panel" id="tab-notes" data-panel>
+        <p class="lead">
+          Write a card, share the link, whoever opens it sees it straight
+          away. Cards you save stick around in this browser only.
+        </p>
+
+        <div id="sharedBanner"></div>
+
+        <div class="panel">
+          <div class="note-form">
+            <div class="note-form-row">
+              <input type="text" id="noteTitle" placeholder="Title (optional)" />
+            </div>
+            <textarea id="noteBody" placeholder="Write something..."></textarea>
+            <div>
+              <button class="btn" id="addNoteBtn">Add card</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-grid" id="cardGrid"></div>
+        <p class="empty-hint" id="emptyHint">No cards yet — add one above.</p>
+      </div>
+
+      <!-- Tower of Hanoi -->
+      <div class="tab-panel" id="tab-hanoi" data-panel>
+        <p class="lead">
+          Click a peg to pick up its top disc, click another peg to drop it
+          there. Move every disc onto the last peg.
+        </p>
+
+        <div class="hanoi-controls">
+          <label for="discCount" class="hanoi-label">discs:</label>
+          <select id="discCount">
+            <option value="3">3</option>
+            <option value="4" selected>4</option>
+            <option value="5">5</option>
+          </select>
+          <button class="btn-ghost" id="hanoiReset">reset</button>
+        </div>
+
+        <div class="hanoi-board" id="hanoiBoard"></div>
+        <p class="hanoi-status" id="hanoiStatus" aria-live="polite">
+          Moves: 0
+        </p>
+      </div>
+
+      <!-- Subnetting cheat sheet -->
+      <div class="tab-panel" id="tab-subnetting" data-panel>
+        <p class="lead">
+          Octet rules, the formulas, a full prefix reference table, and a
+          quick calculator.
+        </p>
+
+        <div class="rule-grid">
+          <div class="panel">
+            <h3>Octet rules</h3>
+            <ul>
+              <li>4 octets, 8 bits each, 0–255 per octet</li>
+              <li>Class A: 1–126, default mask /8</li>
+              <li>Class B: 128–191, default mask /16</li>
+              <li>Class C: 192–223, default mask /24</li>
+              <li>127.x = loopback</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Private ranges</h3>
+            <ul>
+              <li>10.0.0.0/8</li>
+              <li>172.16.0.0/12</li>
+              <li>192.168.0.0/16</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Formulas</h3>
+            <ul>
+              <li>Subnets = 2^s (s = borrowed bits)</li>
+              <li>Hosts/subnet = 2^h − 2 (h = host bits)</li>
+              <li>Block size (interesting octet) = 256 − mask octet</li>
+              <li>/31 = 2 usable (point-to-point), /32 = 1 host</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="panel panel-top">
+          <h3>Prefix reference table</h3>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>CIDR</th>
+                  <th>Subnet mask</th>
+                  <th>Total addresses</th>
+                  <th>Usable hosts</th>
+                </tr>
+              </thead>
+              <tbody id="cidrTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Calculator</h3>
+          <div class="calc-form">
+            <div>
+              <label for="calcIp">IP address</label>
+              <input type="text" id="calcIp" placeholder="192.168.1.10" value="192.168.1.10" />
+            </div>
+            <div>
+              <label for="calcCidr">CIDR</label>
+              <select id="calcCidr"></select>
+            </div>
+            <button class="btn-accent" id="calcBtn">Calculate</button>
+          </div>
+          <p class="calc-error" id="calcError" role="alert"></p>
+          <div class="calc-results" id="calcResults"></div>
+        </div>
+      </div>
+
+      <!-- Roblox games -->
+      <div class="tab-panel" id="tab-roblox" data-panel>
+        <p class="lead">
+          A few things I've built on Roblox. Use the arrows to browse.
+        </p>
+
+        <div class="panel">
+          <div class="carousel">
+            <button class="carousel-arrow" id="carouselPrev" aria-label="Previous game">
+              &#8592;
+            </button>
+            <div class="carousel-track" aria-live="polite">
+              <a class="carousel-slide" id="carouselLink" target="_blank" rel="noopener">
+                <img id="carouselImg" alt="" />
+                <div class="carousel-caption">
+                  <h3 id="carouselTitle"></h3>
+                  <span class="carousel-cta">Play on Roblox →</span>
+                </div>
+              </a>
+            </div>
+            <button class="carousel-arrow" id="carouselNext" aria-label="Next game">
+              &#8594;
+            </button>
+          </div>
+          <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Let's build something.</h2>
+      <p class="lead">
+        Have an idea, a challenge, or a project that could make a difference?
+        Let's talk.
+      </p>
+      <div class="contact-actions">
+        <a class="btn" href="https://github.com/josmrpy" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn-ghost" href="https://www.linkedin.com/in/josimar-madrigal/" target="_blank"
+          rel="noopener">LinkedIn</a>
+        <a class="btn-ghost" href="https://www.instagram.com/josmr.py/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
       <span>built by Josimar (@josmr.py)</span>
-      <img src="favicon.ico?v=1" class="portfolio-favicon" alt="Portfolio favicon" />
+      <img src="favicon.ico?v=1" class="portfolio-favicon" alt="" />
     </div>
   </footer>
 
