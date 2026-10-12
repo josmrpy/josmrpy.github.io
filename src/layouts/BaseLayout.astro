@@ -1,0 +1,41 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "josmr.py | Hello, World!",
+  description = "Portfolio of Josimar Madrigal (josmr.py): student developer from Costa Rica working on accessibility, civic tech, robotics and networking.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+    <link rel="icon" href="/favicon.ico?v=1" sizes="any" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Josimar Madrigal | josmr.py" />
+    <meta
+      property="og:description"
+      content="Student developer from Costa Rica: accessibility, civic tech, robotics and networking."
+    />
+    <meta
+      property="og:image"
+      content="https://github.com/josmrpy/josmrpy/raw/main/banner.png"
+    />
+  </head>
+  <body>
+    <slot />
+    <script>
+      import "../scripts/main.js";
+    </script>
+  </body>
+</html>

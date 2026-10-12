@@ -1,0 +1,47 @@
+---
+import { getImage } from "astro:assets";
+import { ARTICLES } from "../data/articles.js";
+
+// Local images are optimized at build time; remote URLs are used as-is.
+const articles = await Promise.all(
+  ARTICLES.map(async (article) => ({
+    ...article,
+    image:
+      typeof article.image === "string"
+        ? article.image
+        : (await getImage({ src: article.image, width: 640, format: "webp" })).src,
+  })),
+);
+---
+
+<script type="application/json" id="articles-data" set:html={JSON.stringify(articles)} />
+
+<section id="featured-articles" class="featured-articles" aria-labelledby="featuredTitle">
+  <div class="section-heading">
+    <p class="eyebrow">Featured elsewhere</p>
+    <p class="featured-title" id="featuredTitle">Where I've shown up</p>
+  </div>
+  <div class="article-carousel" aria-label="Featured articles">
+    <button class="carousel-arrow" id="articlePrev" aria-label="Previous article">
+      &#8592;
+    </button>
+    <div class="article-track" aria-live="polite">
+      <a class="article-slide" id="articleLink" target="_blank" rel="noopener">
+        <img class="article-thumb" id="articleImage" alt="" />
+        <div class="article-content">
+          <div class="article-meta">
+            <span id="articleSource"></span>
+            <span id="articleDate"></span>
+          </div>
+          <h3 id="articleTitle"></h3>
+          <p id="articleSummary"></p>
+          <span class="article-cta">Read article &#8594;</span>
+        </div>
+      </a>
+    </div>
+    <button class="carousel-arrow" id="articleNext" aria-label="Next article">
+      &#8594;
+    </button>
+  </div>
+  <div class="carousel-dots" id="articleDots" aria-label="Choose an article"></div>
+</section>

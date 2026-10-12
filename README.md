@@ -4,14 +4,14 @@ Hello, World! This is the personal portfolio of Josimar Madrigal. I'm a Costa Ri
 
 **Live website:** [josmrpy.github.io](https://josmrpy.github.io)
 
-The site is a static, responsive, single-page portfolio built with plain HTML, CSS, and JavaScript (no frameworks or build step), with an interactive playground. It is organized into the following sections:
+The site is a static, responsive, single-page portfolio built with [Astro](https://astro.build) (static output, plain CSS and vanilla JavaScript, no UI framework), with an interactive playground. It is organized into the following sections:
 
 ## Portfolio Sections
 
 ### Featured Articles (`#featured-articles`)
 
 - Carousel at the top of the page with press coverage, case studies, and recaps of programs I've taken part in (Delfino.cr, Georgetown CIED, the Ministry of Public Education, the Legislative Assembly, the U.S. Embassy, and more).
-- Browse with the arrows or the dots. Articles are maintained in the `ARTICLES` array in `script.js`.
+- Browse with the arrows or the dots. Articles are maintained in `src/data/articles.js`.
 
 ### Home (`#home`)
 
@@ -89,7 +89,7 @@ The playground uses tabs to keep the interactive tools together. The tabs can be
 
 - Carousel with arrow controls and clickable dots.
 - Links to the official Roblox pages for **Towers of Hanoi** and **Robloxian Physics Binary Counter**.
-- Game entries are maintained in the `ROBLOX_GAMES` array in `script.js`.
+- Game entries are maintained in `src/data/roblox-games.js`.
 
 ## Accessibility
 
@@ -101,12 +101,25 @@ The playground uses tabs to keep the interactive tools together. The tabs can be
 ## Project Structure
 
 ```text
-index.html   Main portfolio markup and content
-styles.css   Responsive visual design and layout
-script.js    Playground interactions, carousels, and content data (ARTICLES, ROBLOX_GAMES)
-thumbs/      Thumbnail assets for featured links and articles
-sumo.png     Sumobot image used in the hero
-favicon.ico  Site icon
+src/
+  pages/index.astro        Page that composes all the sections
+  layouts/BaseLayout.astro <head>, meta tags and the main script
+  components/              One component per section (Hero, About, Projects, ...)
+  data/                    Content data (articles.js, roblox-games.js)
+  scripts/main.js          Playground interactions and carousels
+  styles/global.css        Responsive visual design and layout
+src/assets/                Images optimized by astro:assets (sumo.png, thumbs/)
+public/
+  favicon.ico              Site icon
+.github/workflows/deploy.yml  Builds with Astro and deploys to GitHub Pages
 ```
 
-This repository is the source for the main [josmrpy.github.io](https://josmrpy.github.io) GitHub Pages site.
+## Development
+
+```bash
+npm install
+npm run dev      # local dev server
+npm run build    # static build into dist/
+```
+
+This repository is the source for the main [josmrpy.github.io](https://josmrpy.github.io) GitHub Pages site. In the repo settings, set **Pages → Source** to **GitHub Actions**.

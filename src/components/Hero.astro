@@ -1,0 +1,93 @@
+---
+import { Image } from "astro:assets";
+import sumo from "../assets/sumo.png";
+import fraccion from "../assets/thumbs/fraccion.png";
+import moody from "../assets/thumbs/moody.png";
+import aion from "../assets/thumbs/aion.png";
+import smileseekers from "../assets/thumbs/smileseekers.png";
+---
+
+<section id="home">
+  <div class="hero-shell">
+    <div class="hero-copy">
+      <p class="eyebrow">
+        <span class="img-wrap">
+          <img src="/favicon.ico?v=1" class="portfolio-favicon" alt="" />
+        </span>
+        Hello, World! This is my portfolio.
+      </p>
+      <h1>Josimar Madrigal <span class="accent">› josmr.py</span></h1>
+      <p class="hero-bio">
+        Young Computer Science enthusiast and member of the Scouting
+        movement, focused on impact-driven projects across STEM, IT,
+        education, intercultural communication, and robotics.
+      </p>
+      <ul class="highlights">
+        <li>Top 5 National STEM Fair Finalist · Costa Rica, 2025</li>
+        <li>Developer of Moody, an AAC communication app</li>
+        <li>Cisco Networking Academy Certified</li>
+        <li>Stanford Code in Place 2026 Graduate</li>
+        <li>Youth Ambassadors Program Exchange Alumnus</li>
+      </ul>
+      <div class="hero-actions">
+        <span class="hero-note">Click the sumobot to explore my links and projects. Some tools
+          below, too. ➜</span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="sumo-menu-wrap">
+        <button type="button" class="sumo-trigger" id="sumoTrigger" aria-expanded="false" aria-controls="sumoMenu"
+          aria-label="Open Josimar's featured links">
+          <Image src={sumo} alt="" width={480} height={480} format="webp" loading="lazy" />
+        </button>
+        <div class="sumo-menu" id="sumoMenu">
+          <div class="menu-panel">
+            <p class="menu-title">Featured links</p>
+            <a class="project-card" href="https://josmrpy.github.io/PJGYS-2026/" target="_blank" rel="noopener">
+              <Image class="card-thumb" src={fraccion} alt="" width={72} height={72} format="webp" />
+              <span>
+                <strong>PJGYS 2026</strong>
+                <small>Parlamento Joven Guía y Scout 2026</small>
+              </span>
+            </a>
+            <a class="project-card" href="https://linktr.ee/moodyapp/" target="_blank" rel="noopener">
+              <Image class="card-thumb" src={moody} alt="" width={72} height={72} format="webp" />
+              <span>
+                <strong>Moody</strong>
+                <small>An AAC communication app</small>
+              </span>
+            </a>
+            <a class="project-card" href="https://linktr.ee/aion.huellas.cr/" target="_blank" rel="noopener">
+              <Image class="card-thumb" src={aion} alt="" width={72} height={72} format="webp" />
+              <span>
+                <strong>Aion</strong>
+                <small>Academic Information &amp; Opportunity Network</small>
+              </span>
+            </a>
+            <a class="project-card" href="https://linktr.ee/smileseekers.cr/" target="_blank" rel="noopener">
+              <Image class="card-thumb" src={smileseekers} alt="" width={72} height={72} format="webp" />
+              <span>
+                <strong>Smile Seekers</strong>
+                <small>Community Health Initiative</small>
+              </span>
+            </a>
+            <a class="project-card" href="https://github.com/josmrpy/lyrics-reader" target="_blank" rel="noopener">
+              <img class="card-thumb" loading="lazy"
+                src="https://raw.githubusercontent.com/josmrpy/lyrics-reader/main/assets/music.gif" alt="" />
+              <span>
+                <strong>Lyrics Reader</strong>
+                <small>Python desktop lyrics utility</small>
+              </span>
+            </a>
+            <div class="social-links">
+              <a href="https://github.com/josmrpy" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://www.linkedin.com/in/josimar-madrigal/" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="https://www.instagram.com/josmr.py/" target="_blank" rel="noopener">Instagram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

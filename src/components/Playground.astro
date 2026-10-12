@@ -1,0 +1,195 @@
+<section id="playground">
+  <h2>Playground</h2>
+  <p class="lead">
+    Small interactive tools I've built along the way. Pick one below.
+  </p>
+
+  <div class="playground-tabs" role="tablist">
+    <button class="tab-btn active" data-tab="tab-binary" role="tab" aria-selected="true">
+      Binary counter
+    </button>
+    <button class="tab-btn" data-tab="tab-notes" role="tab" aria-selected="false">
+      Note cards
+    </button>
+    <button class="tab-btn" data-tab="tab-hanoi" role="tab" aria-selected="false">
+      Tower of Hanoi
+    </button>
+    <button class="tab-btn" data-tab="tab-subnetting" role="tab" aria-selected="false">
+      Subnetting
+    </button>
+    <button class="tab-btn" data-tab="tab-roblox" role="tab" aria-selected="false">
+      Roblox games
+    </button>
+  </div>
+
+  <!-- Binary counter -->
+  <div class="tab-panel active" id="tab-binary" data-panel>
+    <p class="lead">
+      Click a bit to flip it, or step through the byte with the buttons.
+    </p>
+    <div class="panel">
+      <div class="bit-values">
+        <span>128</span><span>64</span><span>32</span><span>16</span>
+        <span>8</span><span>4</span><span>2</span><span>1</span>
+      </div>
+      <div class="byte-row" id="byteRow"></div>
+      <div class="binary-readout">
+        <div class="decimal" id="decimalOut">0</div>
+        <div id="binaryOut">00000000</div>
+      </div>
+      <div class="binary-controls">
+        <button class="btn-ghost" id="decBtn">-1</button>
+        <button class="btn-ghost" id="incBtn">+1</button>
+        <button class="btn-ghost" id="resetBtn">reset</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Note cards -->
+  <div class="tab-panel" id="tab-notes" data-panel>
+    <p class="lead">
+      Write a card, share the link, whoever opens it sees it straight
+      away. Cards you save stick around in this browser only.
+    </p>
+
+    <div id="sharedBanner"></div>
+
+    <div class="panel">
+      <div class="note-form">
+        <div class="note-form-row">
+          <input type="text" id="noteTitle" placeholder="Title (optional)" />
+        </div>
+        <textarea id="noteBody" placeholder="Write something..."></textarea>
+        <div>
+          <button class="btn" id="addNoteBtn">Add card</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-grid" id="cardGrid"></div>
+    <p class="empty-hint" id="emptyHint">No cards yet — add one above.</p>
+  </div>
+
+  <!-- Tower of Hanoi -->
+  <div class="tab-panel" id="tab-hanoi" data-panel>
+    <p class="lead">
+      Click a peg to pick up its top disc, click another peg to drop it
+      there. Move every disc onto the last peg.
+    </p>
+
+    <div class="hanoi-controls">
+      <label for="discCount" class="hanoi-label">discs:</label>
+      <select id="discCount">
+        <option value="3">3</option>
+        <option value="4" selected>4</option>
+        <option value="5">5</option>
+      </select>
+      <button class="btn-ghost" id="hanoiReset">reset</button>
+    </div>
+
+    <div class="hanoi-board" id="hanoiBoard"></div>
+    <p class="hanoi-status" id="hanoiStatus" aria-live="polite">
+      Moves: 0
+    </p>
+  </div>
+
+  <!-- Subnetting cheat sheet -->
+  <div class="tab-panel" id="tab-subnetting" data-panel>
+    <p class="lead">
+      Octet rules, the formulas, a full prefix reference table, and a
+      quick calculator.
+    </p>
+
+    <div class="rule-grid">
+      <div class="panel">
+        <h3>Octet rules</h3>
+        <ul>
+          <li>4 octets, 8 bits each, 0–255 per octet</li>
+          <li>Class A: 1–126, default mask /8</li>
+          <li>Class B: 128–191, default mask /16</li>
+          <li>Class C: 192–223, default mask /24</li>
+          <li>127.x = loopback</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Private ranges</h3>
+        <ul>
+          <li>10.0.0.0/8</li>
+          <li>172.16.0.0/12</li>
+          <li>192.168.0.0/16</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Formulas</h3>
+        <ul>
+          <li>Subnets = 2^s (s = borrowed bits)</li>
+          <li>Hosts/subnet = 2^h − 2 (h = host bits)</li>
+          <li>Block size (interesting octet) = 256 − mask octet</li>
+          <li>/31 = 2 usable (point-to-point), /32 = 1 host</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="panel panel-top">
+      <h3>Prefix reference table</h3>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>CIDR</th>
+              <th>Subnet mask</th>
+              <th>Total addresses</th>
+              <th>Usable hosts</th>
+            </tr>
+          </thead>
+          <tbody id="cidrTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Calculator</h3>
+      <div class="calc-form">
+        <div>
+          <label for="calcIp">IP address</label>
+          <input type="text" id="calcIp" placeholder="192.168.1.10" value="192.168.1.10" />
+        </div>
+        <div>
+          <label for="calcCidr">CIDR</label>
+          <select id="calcCidr"></select>
+        </div>
+        <button class="btn-accent" id="calcBtn">Calculate</button>
+      </div>
+      <p class="calc-error" id="calcError" role="alert"></p>
+      <div class="calc-results" id="calcResults"></div>
+    </div>
+  </div>
+
+  <!-- Roblox games -->
+  <div class="tab-panel" id="tab-roblox" data-panel>
+    <p class="lead">
+      A few things I've built on Roblox. Use the arrows to browse.
+    </p>
+
+    <div class="panel">
+      <div class="carousel">
+        <button class="carousel-arrow" id="carouselPrev" aria-label="Previous game">
+          &#8592;
+        </button>
+        <div class="carousel-track" aria-live="polite">
+          <a class="carousel-slide" id="carouselLink" target="_blank" rel="noopener">
+            <img id="carouselImg" alt="" />
+            <div class="carousel-caption">
+              <h3 id="carouselTitle"></h3>
+              <span class="carousel-cta">Play on Roblox →</span>
+            </div>
+          </a>
+        </div>
+        <button class="carousel-arrow" id="carouselNext" aria-label="Next game">
+          &#8594;
+        </button>
+      </div>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+  </div>
+</section>
