@@ -5,6 +5,16 @@ import ccwa from "../assets/thumbs/ccwa.png";
 // Add another article object here when you have a real page to feature.
 export const ARTICLES = [
   {
+    title: "Connecting Communities Through Tech and Leadership",
+    source: "Georgetown University — CIED",
+    date: "Sep 2026",
+    summary:
+      "Case study on my Youth Ambassadors exchange in Cleveland and how it inspired Moody, an app I built for neurodivergent communication.",
+    image:
+      "https://cied.georgetown.edu/wp-content/uploads/sites/323/2026/09/Josimar_inside-C-sign.jpg",
+    url: "https://cied.georgetown.edu/case-studies/josimar-madrigal/",
+  },
+  {
     title:
       "De Limón a Georgetown: Josimar Madrigal convirtió un intercambio estudiantil en proyectos de tecnología y accesibilidad",
     lang: "es",
@@ -15,16 +25,6 @@ export const ARTICLES = [
     image:
       "https://d1qqtien6gys07.cloudfront.net/wp-content/uploads/2026/09/Josimar_Scout-1536x1152.jpeg",
     url: "https://delfino.cr/2026/09/de-limon-a-georgetown-josimar-madrigal-convirtio-un-intercambio-estudiantil-en-proyectos-de-tecnologia-y-accesibilidad",
-  },
-  {
-    title: "Connecting Communities Through Tech and Leadership",
-    source: "Georgetown University — CIED",
-    date: "Sep 2026",
-    summary:
-      "Case study on my Youth Ambassadors exchange in Cleveland and how it inspired Moody, an app I built for neurodivergent communication.",
-    image:
-      "https://cied.georgetown.edu/wp-content/uploads/sites/323/2026/09/Josimar_inside-C-sign.jpg",
-    url: "https://cied.georgetown.edu/case-studies/josimar-madrigal/",
   },
   {
     title: "56 Limón students formed Parlamento Joven Caribe 2024",

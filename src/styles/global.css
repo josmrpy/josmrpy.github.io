@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
 :root {
   --ink: #1c1b18;
   --paper: #ffffff;
@@ -6,8 +8,8 @@
   --border: #e3e1d9;
   --muted: #6b6963;
   --accent: #b30a48;
-  --sans: system-ui, "Segoe UI", Arial, sans-serif;
-  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --sans: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", monospace;
 }
 
 * {

@@ -1,34 +1,52 @@
+---
+import { Image } from "astro:assets";
+---
+
 <section id="about">
-  <img src="https://github.com/josmrpy/josmrpy/raw/main/banner.png" class="about-banner"
-    alt="Josimar Madrigal (josmr.py) profile banner" loading="lazy" />
+  <Image
+    src="https://github.com/josmrpy/josmrpy/raw/main/banner.png"
+    class="about-banner"
+    alt="Josimar Madrigal (josmr.py) profile banner"
+    width={1200}
+    height={300}
+    format="webp"
+    loading="lazy"
+  />
   <h2>About me</h2>
   <p class="lead">
-    A bit about me, my interests, and what drives me to build and
-    contribute.
+    A bit about me, my interests, and what drives me to build and contribute.
   </p>
   <div class="about-shell">
     <div class="about-photo-slot">
-      <img class="about-photo" src="https://github.com/josmrpy.png" alt="Josimar Madrigal" loading="lazy" />
+      <Image
+        class="about-photo"
+        src="https://github.com/josmrpy.png"
+        alt="Josimar Madrigal"
+        width={256}
+        height={256}
+        format="webp"
+        loading="lazy"
+      />
     </div>
     <div class="about-copy">
       <p class="about-bio">
         I'm a Costa Rican student finishing a technical diploma in Network
         Configuration, Communications Support and Operating Systems at CTP
-        Limón. I'm deeply interested in computer science and programming,
-        and I like getting involved in things where I can learn, build,
-        and contribute. I often end up turning that curiosity into
-        projects of my own — from an AAC app and small platforms to a
-        sumo-fighting robot and simple tools built to solve everyday
-        problems. I'm also drawn to intercultural experiences, civic
-        projects, and youth leadership, and I enjoy getting involved in
-        communities and initiatives beyond the classroom.
+        Limón. I'm deeply interested in computer science and programming, and I
+        like getting involved in things where I can learn, build, and
+        contribute. I often end up turning that curiosity into projects of my
+        own — from an AAC app and small platforms to a sumo-fighting robot and
+        simple tools built to solve everyday problems. I'm also drawn to
+        intercultural experiences, civic projects, and youth leadership, and I
+        enjoy getting involved in communities and initiatives beyond the
+        classroom.
       </p>
       <p class="about-bio">
         What ties most of it together is a simple idea: technology is most
-        interesting to me when it can solve a real problem. I'm
-        particularly interested in accessibility and civic participation,
-        where software and technical skills can make information,
-        communication, and opportunities easier to reach.
+        interesting to me when it can solve a real problem. I'm particularly
+        interested in accessibility and civic participation, where software and
+        technical skills can make information, communication, and opportunities
+        easier to reach.
       </p>
       <dl class="quick-facts">
         <div>

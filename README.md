@@ -122,4 +122,4 @@ npm run dev      # local dev server
 npm run build    # static build into dist/
 ```
 
-This repository is the source for the main [josmrpy.github.io](https://josmrpy.github.io) GitHub Pages site. In the repo settings, set **Pages → Source** to **GitHub Actions**.
+This repository is the source for the main [josmrpy.github.io](https://josmrpy.github.io) GitHub Pages site.
